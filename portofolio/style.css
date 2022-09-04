@@ -1,0 +1,13 @@
+body  {
+    min-height: 2000px;
+}
+
+.jumbotron {
+    padding-top: 2rem;
+    background-color: #f1ded6;
+}
+
+
+#skills {
+    background-color: #f1ded6;
+}
