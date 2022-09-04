@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portofolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #d66d6d;">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #d66d6d;">
         <div class="container">
           <a class="navbar-brand" href="#">Ardifjar443</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,16 +22,16 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Skills</a>
+                <a class="nav-link" href="#skills">Skills</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contant Me</a>
+                <a class="nav-link" href="#contact">Contant Me</a>
               </li>
               
             </ul>
@@ -55,10 +59,10 @@
                 </div>
             </div>
             <div class="row justify-content-center fs-5 text-center mb-3">
-                <div class="col-4">
+                <div class="col-md-4">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas debitis sunt eligendi assumenda culpa tenetur commodi rem aliquam alias veniam.</p>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum in soluta quam nulla, provident incidunt debitis consectetur earum, sapiente aliquid distinctio, consequatur laboriosam corrupti perferendis quia facere. Doloremque, aut explicabo.</p>
                 </div>
             </div>
@@ -69,21 +73,132 @@
     <section id="skills">
 
         <div class="container">
-            <div class="row text-center">
+            <div class="row text-center mb-3">
                 <div class="col">
-                    <h2>About Me</h2>
+                    <h2>MY Skills</h2>
                 </div>
             </div>
-            <div class="row justify-content-center fs-5 text-center mb-3">
-                <div class="col-4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas debitis sunt eligendi assumenda culpa tenetur commodi rem aliquam alias veniam.</p>
+            <div class="row justify-content-center">
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="img/images.jpeg" class="card-img-top" alt="mikrotik">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
                 </div>
-                <div class="col-4">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum in soluta quam nulla, provident incidunt debitis consectetur earum, sapiente aliquid distinctio, consequatur laboriosam corrupti perferendis quia facere. Doloremque, aut explicabo.</p>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="img/docker.jpeg" class="card-img-top" alt="mikrotik">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
                 </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="img/christina-wocintechchat-com-PISwYqWIGPc-unsplash.jpg" class="card-img-top" alt="mikrotik">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="img/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg" class="card-img-top" alt="mikrotik">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="img/download.png" class="card-img-top" alt="mikrotik">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            
-    </section> 
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,208C384,213,480,171,576,144C672,117,768,107,864,101.3C960,96,1056,96,1152,133.3C1248,171,1344,245,1392,282.7L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
+      </section> 
+
+
+      <section id="contact">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>Contact me</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="alert alert-primary alert-dismissible fade show d-none my-alert text-center" role="alert">
+                <strong>Terima Kasih</strong> pesan anda sudah diterima
+              </div>
+              <form name="mail-portofolio">
+                <div class="mb-3">
+                  <label for="name" class="form-label">nama lengkap</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="pesan" class="form-label">pesan</label>
+                  <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-kirim">kirim</button>
+                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#d66d6d" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,149.3C384,171,480,181,576,165.3C672,149,768,107,864,112C960,117,1056,171,1152,165.3C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+      </section>
+
+      <footer class="text-white text-center pb-5"  style="background-color: #d66d6d;">
+        
+        <p>Create with <i class="bi bi-heart-fill"></i> by <a href="https://www.instagram.com/ardi_fj_ar/" class="text-white fw-bold">Ardi Fajar Arifin</a></p>
+      </footer>
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwpF4qdgCx8zP-6vJYqvmDTmniehIOyziK6VBEAVmTW7y5UVV1R2uKQV2fY94vor5UHIQ/exec';
+        const form = document.forms['mail-portofolio'];
+        const btnkirim = document.querySelector('.btn-kirim');
+        const btnloading = document.querySelector('.btn-loading');
+        const myalert = document.querySelector('.my-alert');
+        
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          // klik
+          // loading
+          btnloading.classList.toggle('d-none');
+          btnkirim.classList.toggle('d-none');
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+              btnloading.classList.toggle('d-none');
+              btnkirim.classList.toggle('d-none');
+              myalert.classList.toggle('d-none');
+              form.reset();
+              console.log('Success!', response)
+              setTimeout(function(){
+          myalert.classList.toggle('d-none');
+        }, 5000);
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+
+        
+      </script>
+
+  </body>
 </html>
