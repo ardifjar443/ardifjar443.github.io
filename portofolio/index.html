@@ -169,7 +169,8 @@
         <p>Create with <i class="bi bi-heart-fill"></i> by <a href="https://www.instagram.com/ardi_fj_ar/" class="text-white fw-bold">Ardi Fajar Arifin</a></p>
       </footer>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwpF4qdgCx8zP-6vJYqvmDTmniehIOyziK6VBEAVmTW7y5UVV1R2uKQV2fY94vor5UHIQ/exec';
         const form = document.forms['mail-portofolio'];
         const btnkirim = document.querySelector('.btn-kirim');
@@ -181,8 +182,6 @@
           e.preventDefault()
           // klik
           // loading
-          btnloading.classList.toggle('d-none');
-          btnkirim.classList.toggle('d-none');
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
               btnloading.classList.toggle('d-none');
@@ -191,7 +190,7 @@
               form.reset();
               console.log('Success!', response)
             })
-            .catch(error => console.error('Error!', error.message))
+            .catch(error => console.error('Error!', error.mesimage.pngsage))
         })
 
       
