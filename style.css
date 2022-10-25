@@ -3,6 +3,10 @@
     background: linear-gradient(180deg, rgba(250, 250, 250, 1) 0%, rgba(130, 130, 218, 1) 46%, rgba(17, 22, 111, 1) 100%);
 }
 
+.start-footer {
+    background: rgb(17, 22, 111);
+    background: linear-gradient(rgba(17, 22, 111, 1) 0%, rgba(130, 130, 218, 1) 46%);
+}
 
 #navbar {
     background: rgba(64, 80, 169, 0.5);
@@ -105,4 +109,17 @@
     .popup {
         width: 70%;
     }
+}
+
+#text-content {
+    display: none;
+    transition: all 1s linear;
+}
+
+#content-down {
+    display: inline-block;
+}
+
+#content-up {
+    display: none;
 }
