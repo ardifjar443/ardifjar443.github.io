@@ -1,188 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base target="_top">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../css-default/default.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
-<body id="home">
-
-
-
-
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" id="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ardifjar443</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top mb-5" style="background-color: #24262b;">
+    <div class="container">
+      <a class="navbar-brand" href="https://ardifjar443.github.io/">Ardifjar443</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto ">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="https://ardifjar443.github.io/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active">Content Me</a>
+            <a class="nav-link" href=pelesetan.html>About</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link active" href="#popup1">Contect Me</a>
+            <a class="nav-link" href=pelesetan.html>Skills</a>
           </li>
-
+          <li>
+            <button type="button" onclick="openPopup()" class="btn btn-light">Contect Me</button>
+          </li>
 
         </ul>
-
       </div>
     </div>
   </nav>
-  <!-- end navbar -->
 
-  <!-- jumbotron -->
-  <div class="container">
-    <div class="jumbotron mt-5 mb-5">
-      <img src="img/foto profil.png" alt="ardi fajar arifin" width="200" class="rounded-circle img-thumbnail mb-5 mt-5">
-      <h1 class="diisplay-4">Ardi Fajar Arifin</h1>
-      <hr>
-      <h5>biodata</h5>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt delectus culpa impedit nihil ea
-        quibusdam error est minima recusandae doloribus sequi nulla sed itaque nesciunt quos dolorum
-        accusantium, corrupti dignissimos porro dolorem dolores laborum quam, assumenda officia. Accusamus nemo
-        magnam eos dolorem quis. Deleniti quam nobis eius atque, velit adipisci nam culpa non cupiditate
-      </p>
-    </div>
-
-    <!-- content -->
-    <div class="content text-center text-white mt-5">
-
-
-
-      <div class="row text-center mb-3 justify-content-center">
-        <div class="col">
-          <h2>Content</h2>
-          <hr>
+  <br><br><br><br><br><br><br><br><br>
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href=pelesetan.html>about us</a></li>
+            <li><a href=pelesetan.html>our services</a></li>
+            <li><a href=pelesetan.html>privacy policy</a></li>
+            <li><a href=pelesetan.html>affiliate program</a></li>
+          </ul>
         </div>
-      </div>
-      <!-- slide -->
-      <div class="container col-6">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/docker.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="img/christina-wocintechchat-com-PISwYqWIGPc-unsplash.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="img/download.png" class="d-block w-100" alt="...">
-            </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href=pelesetan.html>FAQ</a></li>
+            <li><a href=pelesetan.html>shipping</a></li>
+            <li><a href=pelesetan.html>returns</a></li>
+            <li><a href=pelesetan.html>order status</a></li>
+            <li><a href=pelesetan.html>payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/ardi_fj_ar/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/6289663326703"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/ardifjar443"><i class="fab fa-github"></i></a>
           </div>
         </div>
       </div>
-      <!-- end slide -->
-
-      <button id="content-down" onclick="myFunction()" type="button" class="btn bg-transparent text-white btn-lg"><i
-          class="bi bi-arrow-bar-down"></i></button>
-
-      <button id="content-up" onclick="myFunction()" type="button" class="btn bg-transparent text-white btn-lg"><i
-          class="bi bi-arrow-bar-up"></i></button>
-
-      <div class="row justify-content-center" id="text-content">
-        <div class="col-md-3 py-5">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus labore esse nostrum dolorem quidem debitis
-            ab fugiat, deserunt quam ducimus.</p>
-        </div>
-
-
-        <div class="col-md-3 py-5">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus labore esse nostrum dolorem quidem debitis
-            ab fugiat, deserunt quam ducimus.</p>
-        </div>
-      </div>
-
-
-
-
-
     </div>
-
-  </div>
-  <!-- end content -->
-
-
-  <!-- end jumbotron -->
-
-  <!-- popup box -->
-  <div id="popup1" class="overlay">
-    <div class="popup">
-      <h2>Contect Me</h2>
-      <a class="close" href="#">&times;</a>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="alert alert-primary alert-dismissible fade show d-none my-alert text-center" role="alert">
-            <strong>Terima Kasih</strong> pesan anda sudah diterima <button type="button" class="btn-close"
-              data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          <form name="mail-portofolio">
-            <div class="mb-3">
-              <label for="name" class="form-label">nama lengkap</label>
-              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
-            </div>
-            <div class="mb-3">
-              <label for="pesan" class="form-label">pesan</label>
-              <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-kirim">kirim</button>
-            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-              Loading...
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end popup box -->
-
-  <div class="start-footer mt-5">
-    <br>
-  </div>
-
-  <!-- footer -->
-  <footer class="text-white text-center pb-1 pt-3 " style="background-color: rgba(130, 130, 218, 1)">
+  </footer>
+  <footer class="text-white text-center pb-1 pt-3" style="background-color: #0b1cd5;">
 
     <p>Create with <i class="bi bi-heart-fill"></i> by <a href="https://www.instagram.com/ardi_fj_ar/"
-        class="text-white fw-bold " style="text-decoration: none;">Ardi Fajar Arifin</a></p>
+        class="text-white fw-bold" style="text-decoration: none;">Ardi Fajar Arifin</a></p>
   </footer>
-  <!-- end footer -->
+  <div class="popup" id="popup">
+    <section id="contact">
+      <button type="button" onclick="closePopup()" class="btn btn-light" class="closePopup">X</button>
+      <br><br><br>
+      <div class="container">
+
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Input user</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="alert alert-primary alert-dismissible fade show d-none my-alert text-center" role="alert">
+              <strong>Terima Kasih</strong> pesan anda sudah diterima <button type="button" class="btn-close"
+                data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?var url = getUrl();?>
+            <form name="form" method="post" action="<?= url ?>">
+              <div class="mb-3">
+                <label for="name" class="form-label">nama lengkap</label>
+                <input type="text" class="form-control" id="nama" aria-describedby="name" name="nama" required>
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">NIK</label>
+                <input type="text" class="form-control" id="nik" aria-describedby="name" name="nik" required>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example" id="pilihwarna" name="kecamatan"
+                  id="kecamatan" required>
+                  <option selected>Kecamatan</option>
+                  <option value="Cisurupan">Cisurupan</option>
+                  <option value="Cikajang">Cikajang</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Nomor whatsapp (yang aktif)</label>
+                <input type="tel" class="form-control" id="email" aria-describedby="email" name="nomor wa" required>
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">alamat</label>
+                <textarea class="form-control" id="alamat" rows="3" name="alamat" required></textarea>
+              </div>
+
+              <button value="Upload" type="submit" class="btn btn-primary btn-kirim">kirim</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
 
+  </div>
+
+  <div class="popup2" id="popup2">
+    <br>
+    <h2>Thank you</h2>
+    <p>Terima kasih sudah mengisi form</p>
+    <button type="button" onclick="closePopup2()" class="btn btn-light">Ok</button>
+
+  </div>
 
 
-  <!-- java script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
   </script>
   <script src="script.js"></script>
 
