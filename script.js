@@ -1,5 +1,5 @@
 const scriptURL =
-    'https://script.google.com/macros/s/AKfycbyyzFTcUzBWdEswUiiLJIT15F_MbX5At44Wc4ZN0LzriKyuixjtiu9uCChQrpcU7vOb/exec';
+    'https://script.google.com/macros/s/AKfycbwaCi0prWnW8qFTYjbgD9-8JzDBuPk2mWWGsPYiWAjrh1XsOFVd_2NaDORwXwtD0AGa/exec';
 const form = document.forms['form'];
 const btnkirim = document.querySelector('.btn-kirim');
 const btnloading = document.querySelector('.btn-loading');

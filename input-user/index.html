@@ -137,13 +137,10 @@
                         <a class="nav-link active" aria-current="page" href="https://ardifjar443.github.io/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=pelesetan.html>About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=pelesetan.html>Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=pelesetan.html>Contant Me</a>
+                        <a class="nav-link" href=../pelesetan/pelesetan.html>About </a> </li> <li class="nav-item">
+                            <a class="nav-link" href=../pelesetan/pelesetan.html>Skills </a> </li> <li>
+                                <button type="button" onclick="openPopupKontak()" class="btn btn-light">Contect
+                                    Me</button>
                     </li>
 
                 </ul>
@@ -168,7 +165,7 @@
                             data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <?var url = getUrl();?>
-                    <form name="form" method="post" action="<?= url ?>">
+                    <form name="form2" method="post" action="<?= url ?>">
                         <div class="mb-3">
                             <label for="name" class="form-label">nama lengkap</label>
                             <input type="text" class="form-control" id="nama" aria-describedby="name" name="nama"
@@ -197,14 +194,74 @@
                             <textarea class="form-control" id="alamat" rows="3" name="alamat" required></textarea>
                         </div>
 
-                        <button value="Upload" type="submit" class="btn btn-primary btn-kirim">kirim</button>
-                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                        <button value="Upload" type="submit" class="btn btn-primary btn-kirim2">kirim</button>
+                        <button class="btn btn-primary btn-loading2 d-none" type="button" disabled>
                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                             Loading...
                         </button>
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="popupkontak" id="popupkontak">
+            <section id="contact">
+                <button type="button" onclick="closePopupKontak()" class="btn btn-light" class="closePopup">X</button>
+
+                <div class="container">
+
+                    <div class="row text-center mb-3">
+                        <div class="col">
+                            <h2>Contect Me</h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="alert alert-primary alert-dismissible fade show d-none my-alert text-center"
+                                role="alert">
+                                <strong>Terima Kasih</strong> pesan anda sudah diterima <button type="button"
+                                    class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <?var url = getUrl();?>
+                            <form name="form" method="post" action="<?= url ?>">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">name</label>
+                                    <input type="text" class="form-control" id="nama" aria-describedby="name"
+                                        name="nama(kontak)" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">email</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="email"
+                                        name="email(kontak)" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pesan" class="form-label">pesan</label>
+                                    <textarea class="form-control" id="pesan" rows="3" name="pesan(kontak)"
+                                        required></textarea>
+                                </div>
+
+                                <button value="Upload" type="submit" class="btn btn-primary btn-kirim">kirim</button>
+                                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status"
+                                        aria-hidden="true"></span>
+                                    Loading...
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </div>
+
+        <div class="popupthanks" id="popup2thanks">
+            <br>
+            <h2>Thank you</h2>
+            <p>Terima kasih sudah mengisi form dan pesan</p>
+            <button type="button" onclick="closePopupThanks()" class="btn btn-light">Ok</button>
+
         </div>
 
     </section><br><br><br><br><br><br><br><br><br>
@@ -214,29 +271,31 @@
                 <div class="footer-col">
                     <h4>company</h4>
                     <ul>
-                        <li><a href=pelesetan.html>about us</a></li>
-                        <li><a href=pelesetan.html>our services</a></li>
-                        <li><a href=pelesetan.html>privacy policy</a></li>
-                        <li><a href=pelesetan.html>affiliate program</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>get help</h4>
-                    <ul>
-                        <li><a href=pelesetan.html>FAQ</a></li>
-                        <li><a href=pelesetan.html>shipping</a></li>
-                        <li><a href=pelesetan.html>returns</a></li>
-                        <li><a href=pelesetan.html>order status</a></li>
-                        <li><a href=pelesetan.html>payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/ardi_fj_ar/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/6289663326703"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://github.com/ardifjar443"><i class="fab fa-github"></i></a>
-                    </div>
+                        <li><a href=../pelesetan/pelesetan.html>about us</a> </li> <li><a
+                                    href=../pelesetan/pelesetan.html>our services</a> </li> <li><a
+                                        href=../pelesetan/pelesetan.html>privacy policy</a> </li> <li><a
+                                            href=../pelesetan/pelesetan.html>affiliate program</a> </li> </ul> </div>
+                                            <div class="footer-col">
+                                            <h4>get help</h4>
+                                            <ul>
+                                                <li><a href=../pelesetan/pelesetan.html>FAQ </a> </li> <li><a
+                                                            href=../pelesetan/pelesetan.html>shipping </a> </li> <li><a
+                                                                href=../pelesetan/pelesetan.html>returns </a> </li>
+                                                                <li><a href=../pelesetan/pelesetan.html>order status</a>
+                                                                    </li> <li><a
+                                                                        href=../pelesetan/pelesetan.html>payment
+                                                                        options</a> </li> </ul> </div> <div
+                                                                        class="footer-col">
+                                                                        <h4>follow us</h4>
+                                                                        <div class="social-links">
+                                                                            <a
+                                                                                href="https://www.instagram.com/ardi_fj_ar/"><i
+                                                                                    class="fab fa-instagram"></i></a>
+                                                                            <a href="https://wa.me/6289663326703"><i
+                                                                                    class="fab fa-whatsapp"></i></a>
+                                                                            <a href="https://github.com/ardifjar443"><i
+                                                                                    class="fab fa-github"></i></a>
+                                                                        </div>
                 </div>
             </div>
         </div>
