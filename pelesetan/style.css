@@ -1,13 +1,15 @@
 .popup {
-    background: blue;
+    background: white;
     border-radius: 6px;
     position: absolute;
     top: 0;
-    left: 38%;
+    left: 28%;
     transform: translate(-5%, -35%) scale(0.1);
     text-align: left;
     padding: 0 0px 30px;
-    color: white;
+    color: black;
+    border-style: solid;
+    border-color: black;
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
 }

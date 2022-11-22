@@ -1,9 +1,9 @@
 .popup {
-    background: black;
-    border-radius: 15px;
+    background: blue;
+    border-radius: 6px;
     position: absolute;
     top: 0;
-    left: 28%;
+    left: 38%;
     transform: translate(-5%, -35%) scale(0.1);
     text-align: left;
     padding: 0 0px 30px;
@@ -18,8 +18,6 @@
     transform: translate(-5%, -35%) scale(1);
 
 }
-
-
 
 .popup2 {
 
