@@ -1,32 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
 .popup {
-    background: blue;
-    border-radius: 6px;
-    position: absolute;
-    top: 0;
-    left: 35%;
-    transform: translate(-5%, -35%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: white;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-}
-
-.open-popup {
-    visibility: visible;
-    top: 30%;
-    transform: translate(-5%, -35%) scale(1);
-
-}
-
-.popup2 {
     background: blue;
     border-radius: 6px;
     position: absolute;
@@ -40,14 +12,14 @@
     transition: transform 0.4s, top 0.4s;
 }
 
-.open-popup2 {
+.open-popup {
     visibility: visible;
     top: 50%;
     transform: translate(-5%, -35%) scale(1);
 
 }
 
-.popup3 {
+.popup2 {
 
     background: blue;
     border-radius: 10px;
@@ -63,7 +35,7 @@
     transition: transform 0.4s, top 0.4s;
 }
 
-.open-popup3 {
+.open-popup2 {
     visibility: visible;
     top: 40%;
     transform: translate(-5%, -35%) scale(1);
