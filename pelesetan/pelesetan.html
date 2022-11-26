@@ -1,219 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base target="_top">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Pelesetan</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-        body {
-            line-height: 1.5;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 1170px;
-            margin: auto;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        .footer {
-            background-color: #24262b;
-            padding: 70px 0;
-        }
-
-        .footer-col {
-            width: 32%;
-            padding: 0 15px;
-        }
-
-        .footer-col h4 {
-            font-size: 18px;
-            color: #ffffff;
-            text-transform: capitalize;
-            margin-bottom: 35px;
-            font-weight: 500;
-            position: relative;
-        }
-
-        .footer-col h4::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            background-color: #0b1cd5;
-            height: 2px;
-            box-sizing: border-box;
-            width: 50px;
-        }
-
-        .footer-col ul li:not(:last-child) {
-            margin-bottom: 10px;
-        }
-
-        .footer-col ul li a {
-            font-size: 16px;
-            text-transform: capitalize;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 300;
-            color: #bbbbbb;
-            display: block;
-            transition: all 0.3s ease;
-        }
-
-        .footer-col ul li a:hover {
-            color: #ffffff;
-            padding-left: 10px;
-        }
-
-        .footer-col .social-links a {
-            display: inline-block;
-            height: 40px;
-            width: 40px;
-            background-color: rgba(255, 255, 255, 0.2);
-            margin: 0 10px 10px 0;
-            text-align: center;
-            line-height: 40px;
-            border-radius: 50%;
-            color: #ffffff;
-            transition: all 0.5s ease;
-        }
-
-        .footer-col .social-links a:hover {
-            color: #24262b;
-            background-color: #ffffff;
-        }
-
-        /*responsive*/
-        @media(max-width: 767px) {
-            .footer-col {
-                width: 50%;
-                margin-bottom: 30px;
-            }
-        }
-
-        @media(max-width: 574px) {
-            .footer-col {
-                width: 100%;
-            }
-        }
-
-        @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap');
-
-        html,
-        body {
-            font-family: 'Raleway', sans-serif;
-        }
-
-        .thankyou-page ._header {
-            background: #0b1cd5;
-            padding: 100px 30px;
-            text-align: center;
-            background: #0b1cd5 url(https://codexcourier.com/images/main_page.jpg) center/cover no-repeat;
-        }
-
-        .thankyou-page ._header .logo {
-            max-width: 200px;
-            margin: 0 auto 50px;
-        }
-
-        .thankyou-page ._header .logo img {
-            width: 100%;
-        }
-
-        .thankyou-page ._header h1 {
-            font-size: 65px;
-            font-weight: 800;
-            color: white;
-            margin: 0;
-        }
-
-        .thankyou-page ._body {
-            margin: -70px 0 30px;
-        }
-
-        .thankyou-page ._body ._box {
-            margin: auto;
-            max-width: 80%;
-            padding: 50px;
-            background: white;
-            border-radius: 3px;
-            box-shadow: 0 0 35px rgba(10, 10, 10, 0.12);
-            -moz-box-shadow: 0 0 35px rgba(10, 10, 10, 0.12);
-            -webkit-box-shadow: 0 0 35px rgba(10, 10, 10, 0.12);
-        }
-
-        .thankyou-page ._body ._box h2 {
-            font-size: 32px;
-            font-weight: 600;
-            color: black;
-        }
-
-        .thankyou-page ._footer {
-            text-align: center;
-            padding: 50px 30px;
-        }
-
-        .thankyou-page ._footer .btn {
-            background: #0b1cd5;
-            color: white;
-            border: 0;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 0;
-            letter-spacing: 0.8px;
-            padding: 20px 33px;
-            text-transform: uppercase;
-        }
-    </style>
+    <title>Home</title>
+    <link rel="icon" href="img/Logo Design Idea 2.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top mb-5" style="background-color: #24262b;">
-        <div class="container">
-            <a class="navbar-brand" href="../home.html">Ardifjar443</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href=../pelesetan/pelesetan.html>About </a> </li> <li class="nav-item">
-                            <a class="nav-link" href=../pelesetan/pelesetan.html>Skills </a> </li> <li>
-                                <button type="button" onclick="openPopup()" class="btn btn-light"
-                                    data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contect Me</button>
-                    </li>
 
+    <nav class="transparen navbar navbar-expand-lg navbar-dark text-bg-dark shadow-sm fixed-top navbar-scroll">
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-bold" href="index.html">
+
+                Ardifjar443
+            </a>
+
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle me-5 fw-bold" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Daftar Menu
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../index.html#home">Home</a></li>
+                    <li><a class="dropdown-item" href="../index.html#about">About</a></li>
+                    <li><a class="dropdown-item" href="#">Project</a></li>
+                    <li><a class="dropdown-item bg-dark text-light modal-button">Contect me</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- jumbotron -->
     <div class="thankyou-page">
         <div class="_header">
             <div class="logo">
@@ -234,26 +64,29 @@
                 to homepage</a>
         </div>
     </div>
+
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
                 <div class="footer-col">
                     <h4>company</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><a href="../index.html#about">about us</a> </li>
+                        <li><a href="pelesetan/pelesetan.html">our services</a> </li>
+                        <li><a href="pelesetan/pelesetan.html">privacy policy</a> </li>
+                        <li><a href="pelesetan/pelesetan.html">affiliate program</a> </li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>get help</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
+                        <li><a href="/pelesetan/pelesetan.html">FAQ </a> </li>
+                        <li><a href="pelesetan/pelesetan.html">shipping </a> </li>
+                        <li><a href="pelesetan/pelesetan.html">returns </a> </li>
+                        <li><a href="pelesetan/pelesetan.html">order status</a>
+                        </li>
+                        <li><a href="pelesetan/pelesetan.html">payment
+                                options</a> </li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -267,78 +100,108 @@
             </div>
         </div>
     </footer>
-    <footer class="text-white text-center pb-1 pt-3" style="background-color: #0b1cd5;">
+    <footer class=" text-center pb-1 pt-3 text-light" style="background-color: #0b1cd5;">
 
         <p>Create with <i class="bi bi-heart-fill"></i> by <a href="https://www.instagram.com/ardi_fj_ar/"
-                class="text-white fw-bold" style="text-decoration: none;">Ardi Fajar Arifin</a></p>
+                class="text-light fw-bold" style="text-decoration: none;">Ardi Fajar Arifin</a></p>
     </footer>
-    <!-- popup -->
-    <div class="popup col-6" id="popup">
-        <section id="contact">
-            <button type="button" onclick="closePopup()" class="btn btn-light" class="closePopup">X</button>
 
-            <div class="container">
 
-                <div class="row text-center mb-3">
-                    <div class="col">
-                        <h2>Contect Me</h2>
-                    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+
+
+    <div class="modal">
+        <div class="modal-container">
+            <div class="modal-left">
+                <h1 class="modal-title">Selamat Datang!</h1>
+                <p class="modal-desc">Mari isi form dibawah ini</p>
+                <div class="alert alert-primary alert-dismissible fade show d-none my-alert text-center" role="alert">
+                    <strong>Terima Kasih</strong> pesan anda sudah diterima <button type="button" class="btn-close"
+                        data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="alert alert-primary alert-dismissible fade show d-none my-alert text-center"
-                            role="alert">
-                            <strong>Terima Kasih</strong> pesan anda sudah diterima <button type="button"
-                                class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                        <?var url = getUrl();?>
-                        <form name="form" method="post" action="<?= url ?>">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">name</label>
-                                <input type="text" class="form-control" id="nama" aria-describedby="name"
-                                    name="nama(kontak)" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="email" class="form-label">email</label>
-                                <input type="email" class="form-control" id="email" aria-describedby="email"
-                                    name="email(kontak)" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="pesan" class="form-label">pesan</label>
-                                <textarea class="form-control" id="alamat" rows="3" name="pesan(kontak)"
-                                    required></textarea>
-                            </div>
-
-                            <button value="Upload" type="submit" class="btn btn-primary btn-kirim">kirim</button>
-                            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                Loading...
-                            </button>
-                        </form>
+                <form name="form" method="post" action="<?= url ?>">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">name</label>
+                        <input type="text" class="form-control" id="nama" aria-describedby="name" name="nama(kontak)"
+                            required>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="email"
+                            name="email(kontak)" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pesan" class="form-label">pesan</label>
+                        <textarea class="form-control" id="alamat" rows="3" name="pesan(kontak)" required></textarea>
+                    </div>
+
+                    <button value="Upload" type="submit" class="btn btn-primary btn-kirim mb-5">kirim</button>
+                    <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                    </button>
+                </form>
+            </div>
+            <div class="modal-right">
+                <div class="m-5">
+                    <br class="mt-5">
+                    <h3 class="text-center fs-2 fw-bold mt-5">Quote hari ini</h3>
+                    <p class="text-center fs-4"> "Jika kamu tak menemukan buku yang kamu cari di rak, maka
+                        tulislah sendiri."</p>
                 </div>
             </div>
-
-        </section>
-
-
-    </div>
-
-    <div class="popup2" id="popup2">
-        <br>
-        <h2>Thank you</h2>
-        <p>Terima kasih sudah mengisi form dan pesan</p>
-        <button type="button" onclick="closePopup2()" class="btn btn-light">Ok</button>
-
+            <button class="icon-button close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path
+                        d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <button class="">Klik disini untuk masuk</button>
     </div>
 
 
-    <script src="script.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    <script>
+        // Javascript Template 
+        const body = document.querySelector("body");
+        const modal = document.querySelector(".modal");
+        const modalButton = document.querySelector(".modal-button");
+        const closeButton = document.querySelector(".close-button");
+        const scrollDown = document.querySelector(".scroll-down");
+        let isOpened = false;
+
+        const openModal = () => {
+            modal.classList.add("is-open");
+            body.style.overflow = "hidden";
+        };
+
+        const closeModal = () => {
+            modal.classList.remove("is-open");
+            body.style.overflow = "initial";
+        };
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > window.innerHeight / 3 && !isOpened) {
+                isOpened = true;
+                scrollDown.style.display = "none";
+                openModal();
+            }
+        });
+
+        modalButton.addEventListener("click", openModal);
+        closeButton.addEventListener("click", closeModal);
+
+        document.onkeydown = evt => {
+            evt = evt || window.event;
+            evt.keyCode === 27 ? closeModal() : false;
+        };
     </script>
+    <script src="script.js"></script>
+
 </body>
 
 </html>

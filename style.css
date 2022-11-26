@@ -43,6 +43,7 @@
 
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -152,6 +153,8 @@ ul {
     -o-border-radius: 1rem;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 body {
-    font-family: "Lucida Handwriting", Cursive;
+    font-family: 'Ubuntu', sans-serif;
 }
