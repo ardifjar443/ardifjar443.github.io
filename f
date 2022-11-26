@@ -1,0 +1,193 @@
+<nav class="transparen navbar navbar-expand-lg navbar-dark text-bg-dark shadow-sm fixed-top navbar-scroll">
+    <div class="container">
+        <a class="navbar-brand fs-4 fw-bold" href="index.html">
+
+            Ardifjar443
+        </a>
+
+        <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle me-5 fw-bold" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Menu
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#home">Home</a></li>
+                <li><a class="dropdown-item" href="#about">About</a></li>
+                <li><a class="dropdown-item" href="#">Project</a></li>
+                <li><a class="dropdown-item bg-dark text-light" href="#formulir"
+                        style="border:5px solid white; border-radius: 15px;">Contect Me</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- jumbotron -->
+<section class="min-vh-100 d-flex align-items-center py-lg-0 " id="home">
+    <div class="container">
+        <div class="row align-items-center  g-lg-0">
+            <div class="col-lg-7 order-lg-1 order-2  ">
+                <p class="text-muted fs-5">Hello I'm</p>
+                <h1 class="fs-1 fw-bold">Ardi Fajar Arifin</h1>
+                <p style="color: #0b1cd5;" class="fs-4">Mahasiswa IT</p>
+                <a href="#about" class="btn btn-secondary fs-5">About Me</a>
+            </div>
+            <div class="col-lg-5 order-lg-2 order-1 mb-5">
+                <img class="my-foto" src="img/foto profil.png">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- about -->
+<div class="mt-5 mb-5" id="about"><br><br></div>
+<section class="about mt-5">
+    <div class="container bg-black text-light mb-5" style="border:10px solid white; border-radius: 35px;"><br>
+        <h1 class="fw-bold text-center">About Me</h1>
+        <div class="row">
+            <div class="col-md  mb-5">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium reiciendis doloribus sunt
+                    sint non error neque tempora! Dolor, placeat! Deleniti eum nostrum placeat, suscipit voluptate
+                    praesentium, molestias ratione repellat harum, omnis reiciendis mollitia aperiam nisi id est
+                    ipsa eius odio recusandae voluptatum ex eveniet laborum modi. Quibusdam repellendus totam hic!
+                </p>
+            </div>
+            <div class="col-md mb-3 bg-light text-center" style="border:10px solid black ; border-radius:25px;">
+                <img src="img/headhunting.png" width="200" class="mt-5 mb-5">
+                <p class="text-dark mt-2">CV bisa didownload melalui button dibawah ini
+                </p>
+                <div class="tombol">
+                    <a href="pelesetan/pelesetan.html" class="btn btn-danger mb-3 me-5 ms-5 align-items-center">Download
+                        CV</a>
+                    <div class="social-links">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end about -->
+<div class="m-5">
+    <br><br>
+</div>
+
+<div class="container text-center">
+
+</div>
+
+<!-- form -->
+<div class="mt-5 mb-5" id="formulir"><br><br></div>
+<section class="formulir">
+    <div class="container ">
+        <div class="row d-flex align-items-center" style="border: 10px solid white; border-radius: 35px;">
+            <div class="col-md" style="border: 10px solid white; border-radius: 15px; background:white;">
+                <div class="row  mt-5">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 ">
+                        <h3 class="text-center fs-1 fw-bold">Quote hari ini</h3>
+                        <p class="text-center fs-3"> "Jika kamu tak menemukan buku yang kamu cari di rak, maka
+                            tulislah sendiri."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md bg-dark text-light order-md-first"
+                style="border: 10px solid white; border-radius: 35px;">
+                <div class="row justify-content-center m-3 mb-5 fs-4 mt-5">
+                    <h2 class="text-center mb-4 fs-2 fw-bold">Form Content Me</h2>
+                    <div class="col">
+                        <form name="form" method="post" action="<?= url ?>">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">name</label>
+                                <input type="text" class="form-control" id="nama" aria-describedby="name"
+                                    name="nama(kontak)" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">email</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="email"
+                                    name="email(kontak)" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pesan" class="form-label">pesan</label>
+                                <textarea class="form-control" id="alamat" rows="3" name="pesan(kontak)"
+                                    required></textarea>
+                            </div>
+
+                            <button value="Upload" type="submit" class="btn btn-primary btn-kirim">kirim</button>
+                            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- end form -->
+
+
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="pelesetan/pelesetan.html">about us</a> </li>
+                    <li><a href="pelesetan/pelesetan.html">our services</a> </li>
+                    <li><a href="pelesetan/pelesetan.html">privacy policy</a> </li>
+                    <li><a href="pelesetan/pelesetan.html">affiliate program</a> </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="/pelesetan/pelesetan.html">FAQ </a> </li>
+                    <li><a href="pelesetan/pelesetan.html">shipping </a> </li>
+                    <li><a href="pelesetan/pelesetan.html">returns </a> </li>
+                    <li><a href="pelesetan/pelesetan.html">order status</a>
+                    </li>
+                    <li><a href="pelesetan/pelesetan.html">payment
+                            options</a> </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/ardi_fj_ar/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6289663326703"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://github.com/ardifjar443"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class=" text-center pb-1 pt-3 text-light" style="background-color: #0b1cd5;">
+
+    <p>Create with <i class="bi bi-heart-fill"></i> by <a href="https://www.instagram.com/ardi_fj_ar/"
+            class="text-light fw-bold" style="text-decoration: none;">Ardi Fajar Arifin</a></p>
+</footer>
+
+<!-- popup -->
+
+<div class="container">
+    <div class="popup2" id="popup2">
+        <br>
+        <h2>Thank you</h2>
+        <p>Terima kasih sudah mengisi form dan pesan</p>
+        <button type="button" onclick="closePopup2()" class="btn btn-light">Ok</button>
+
+    </div>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+</script>
