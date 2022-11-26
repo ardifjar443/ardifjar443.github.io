@@ -82,7 +82,7 @@ ul {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: white;
+    background-color: #0b1cd5;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -138,4 +138,19 @@ ul {
     .footer-col {
         width: 100%;
     }
+}
+
+.my-foto {
+
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+body {
+    font-family: cursive;
 }
