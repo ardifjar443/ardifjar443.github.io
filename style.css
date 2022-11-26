@@ -9,7 +9,7 @@
 
 
 .open-popup {
-    position: fixed;
+    position: absolute;
     top: 25%;
     transform: translate(-1%) scale(1);
 }
@@ -32,7 +32,7 @@
 
 .open-popup2 {
     visibility: visible;
-    top: 40%;
+    top: 50%;
     transform: translate(-5%, -35%) scale(1);
 
 }

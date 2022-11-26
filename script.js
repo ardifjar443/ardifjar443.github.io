@@ -45,7 +45,6 @@ form.addEventListener('submit', e => {
             btnkirim.classList.toggle('d-none');
             form.reset();
             console.log('Success!', response)
-            popup.classList.remove("open-popup")
             popup2.classList.add("open-popup2")
         })
         .catch(error => console.error('Error!', error.mesimage.pngsage))
