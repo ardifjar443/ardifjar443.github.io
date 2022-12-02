@@ -1,1 +1,1 @@
-#selamat datang di github ardi fajar arifin saya masih menjadi seorang mahasiswa di unikom
+#selamat datang di github ardi fajar saya masih menjadi seorang mahasiswa di unikom
