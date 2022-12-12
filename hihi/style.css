@@ -1,31 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
+
 .popup {
-    background: black;
-    border-radius: 15px;
     position: absolute;
     top: 0;
     left: 28%;
     transform: translate(-5%, -35%) scale(0.1);
-    text-align: left;
-    padding: 0 0px 30px;
-    color: white;
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
 }
 
+
 .open-popup {
-    visibility: visible;
-    top: 50%;
-    transform: translate(-5%, -35%) scale(1);
-
+    position: absolute;
+    top: 25%;
+    transform: translate(-1%) scale(1);
 }
-
-
 
 .popup2 {
 
     background: blue;
     border-radius: 10px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 38%;
     transform: translate(-5%, -35%) scale(0.1);
@@ -39,13 +34,13 @@
 
 .open-popup2 {
     visibility: visible;
-    top: 40%;
+    top: 50%;
     transform: translate(-5%, -35%) scale(1);
 
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 
 
@@ -145,4 +140,21 @@ ul {
     .footer-col {
         width: 100%;
     }
+}
+
+.my-foto {
+
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
 }

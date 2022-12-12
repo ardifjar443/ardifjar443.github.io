@@ -7,35 +7,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="form.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <title>Home</title>
+  <title>Login</title>
+  <link rel="icon" href="img/Logo Design Idea 2.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
-  <nav class="transparen navbar navbar-expand-lg navbar-dark shadow-sm fixed-top text-bg-dark navbar-scroll">
+  <nav class="transparen navbar navbar-expand-lg navbar-dark text-bg-dark shadow-sm fixed-top navbar-scroll">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand fs-4 fw-bold" href="index.html">
 
         Ardifjar443
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href=../pelesetan/pelesetan.html target="home">About </a> </li>
-          <li class="nav-item">
-            <a class="nav-link" href=../pelesetan/pelesetan.html>Skills </a> </li> <li>
-              <button type="button" onclick="openPopup()" class="btn btn-light" data-bs-toggle="collapse"
-                data-bs-target=".navbar-collapse.show">Contect Me</button>
-          </li>
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle me-5 fw-bold" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Daftar Menu
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="../index.html#home">Home</a></li>
+          <li><a class="dropdown-item" href="../index.html#about">About</a></li>
+          <li><a class="dropdown-item" href="../pelesetan">Project</a></li>
 
         </ul>
       </div>
@@ -43,12 +44,27 @@
   </nav>
 
   <!-- jumbotron -->
-  <section class="jumbotron text-center mt-5">
-    <img src="img/foto profil.png" alt="ardi fajar arifin" width="200" class="rounded-circle img-thumbnail mb-5 mt-5">
-    <h1 class="display-4">Ardi Fajar Arifin</h1>
-    <p class="lead">Mahasiswa IT</p>
+  <section class="min-vh-100 d-flex align-items-center py-lg-0 " id="home">
+    <div class="container">
+      <div class="row align-items-center  g-lg-0">
+        <div class="col-lg-7 order-lg-1 order-2  ">
+          <h1 class="fs-1 fw-bold">Selamat Datang</h1>
+          <a class="btn btn-secondary fs-5 modal-button">Login</a>
+        </div>
+        <div class="col-lg-5 order-lg-2 order-1 mb-5">
+          <img class="my-foto" src="img/welcome.jpeg">
+        </div>
+      </div>
+
+    </div>
   </section>
 
+  <!-- about -->
+
+
+  <!-- form -->
+
+  <!-- end form -->
 
 
   <footer class="footer mt-5">
@@ -57,99 +73,150 @@
         <div class="footer-col">
           <h4>company</h4>
           <ul>
-            <li><a href=../pelesetan/pelesetan.html>about us</a> </li> <li><a href=../pelesetan/pelesetan.html>our
-                  services</a> </li> <li><a href=../pelesetan/pelesetan.html>privacy policy</a> </li> <li><a
-                      href=../pelesetan/pelesetan.html>affiliate program</a> </li> </ul> </div> <div class="footer-col">
-                      <h4>get help</h4>
-                      <ul>
-                        <li><a href=../pelesetan/pelesetan.html>FAQ </a> </li> <li><a
-                              href=../pelesetan/pelesetan.html>shipping </a> </li> <li><a
-                                href=../pelesetan/pelesetan.html>returns </a> </li> <li><a
-                                  href=../pelesetan/pelesetan.html>order status</a> </li> <li><a
-                                    href=../pelesetan/pelesetan.html>payment options</a> </li> </ul> </div> <div
-                                    class="footer-col">
-                                    <h4>follow us</h4>
-                                    <div class="social-links">
-                                      <a href="https://www.instagram.com/ardi_fj_ar/"><i
-                                          class="fab fa-instagram"></i></a>
-                                      <a href="https://wa.me/6289663326703"><i class="fab fa-whatsapp"></i></a>
-                                      <a href="https://github.com/ardifjar443"><i class="fab fa-github"></i></a>
-                                    </div>
+            <li><a href="pelesetan/pelesetan.html">about us</a> </li>
+            <li><a href="pelesetan/pelesetan.html">our services</a> </li>
+            <li><a href="pelesetan/pelesetan.html">privacy policy</a> </li>
+            <li><a href="pelesetan/pelesetan.html">affiliate program</a> </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="/pelesetan/pelesetan.html">FAQ </a> </li>
+            <li><a href="pelesetan/pelesetan.html">shipping </a> </li>
+            <li><a href="pelesetan/pelesetan.html">returns </a> </li>
+            <li><a href="pelesetan/pelesetan.html">order status</a>
+            </li>
+            <li><a href="pelesetan/pelesetan.html">payment
+                options</a> </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/ardi_fj_ar/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/6289663326703"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/ardifjar443"><i class="fab fa-github"></i></a>
+          </div>
         </div>
       </div>
     </div>
   </footer>
-  <footer class="text-white text-center pb-1 pt-3" style="background-color: #0b1cd5;">
+  <footer class=" text-center pb-1 pt-3 text-light" style="background-color: #0b1cd5;">
 
     <p>Create with <i class="bi bi-heart-fill"></i> by <a href="https://www.instagram.com/ardi_fj_ar/"
-        class="text-white fw-bold" style="text-decoration: none;">Ardi Fajar Arifin</a></p>
+        class="text-light fw-bold" style="text-decoration: none;">Ardi Fajar Arifin</a></p>
   </footer>
 
   <!-- popup -->
-  <div class="popup col-6" id="popup">
-    <section id="contact">
-      <button type="button" onclick="closePopup()" class="btn" style="background-color: black; color:black; "
-        class="closePopup">
-        <p style="color:white;">X</p>
-      </button>
 
-      <div class="container">
+  <div class="container">
+    <div class="popup2" id="popup2">
+      <br>
+      <h2>Thank you</h2>
+      <p>Terima kasih sudah mengisi form dan pesan</p>
+      <button type="button" onclick="closePopup2()" class="btn btn-light">Ok</button>
 
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Contect Me</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="alert alert-primary alert-dismissible fade show d-none my-alert text-center" role="alert">
-              <strong>Terima Kasih</strong> pesan anda sudah diterima <button type="button" class="btn-close"
-                data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?var url = getUrl();?>
-            <form name="form" method="post" action="<?= url ?>">
-              <div class="mb-3">
-                <label for="name" class="form-label">name</label>
-                <input type="text" class="form-control" id="nama" aria-describedby="name" name="nama(kontak)" required>
-              </div>
-
-              <div class="mb-3">
-                <label for="email" class="form-label">email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" name="email(kontak)"
-                  required>
-              </div>
-              <div class="mb-3">
-                <label for="pesan" class="form-label">pesan</label>
-                <textarea class="form-control" id="alamat" rows="3" name="pesan(kontak)" required></textarea>
-              </div>
-
-              <button value="Upload" type="submit" class="btn btn-primary btn-kirim">kirim</button>
-              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                Loading...
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-    </section>
+    </div>
 
 
   </div>
 
-  <div class="popup2" id="popup2">
-    <br>
-    <h2>Thank you</h2>
-    <p>Terima kasih sudah mengisi form dan pesan</p>
-    <button type="button" onclick="closePopup2()" class="btn btn-light">Ok</button>
 
-  </div>
 
-  <script src="script.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
   </script>
+
+
+  <div class="modal">
+    <div class="modal-container">
+      <div class="modal-left">
+        <h1 class="modal-title">Selamat Datang!</h1><br>
+
+        <form name="login">
+          <div class="input-block">
+            <label for="username" class="input-label">Nama Pacar</label>
+            <input type="text" name="username" id="username" placeholder="Nama Pacar Kamu">
+          </div>
+          <div class="input-block">
+            <label for="password" class="input-label">Tanggal Lahir Pacar Kamu</label>
+            <input type="text" name="password" id="password" placeholder="DD/MM/YYYY">
+          </div>
+          <div class="modal-buttons">
+            <button class="input-button" type="button" onClick="Login()">Masuk</button>
+          </div>
+        </form>
+        <p class="sign-up">Belum punya akun? <a href="../pelesetan/">Buat Sekarang</a></p>
+      </div>
+      <div class="modal-right">
+        <img src="img/Home.jpeg" alt="">
+      </div>
+      <button class="icon-button close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <path
+            d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+
+  <script>
+    // Login System Logic
+    function Login() {
+      var done = 0;
+      var username = document.login.username.value;
+      username = username.toLowerCase();
+      var password = document.login.password.value;
+      password = password.toLowerCase();
+      if (username == "ardi fajar arifin" && password == "05/03/2004") {
+        window.location.href = "./secret";
+      } else
+      if (done == 0) {
+        alert("nama/tanggal lahir yang anda masukan salah!");
+      }
+    }
+
+
+    // Javascript Template 
+    const body = document.querySelector("body");
+    const modal = document.querySelector(".modal");
+    const modalButton = document.querySelector(".modal-button");
+    const closeButton = document.querySelector(".close-button");
+    const scrollDown = document.querySelector(".scroll-down");
+    let isOpened = false;
+
+    const openModal = () => {
+      modal.classList.add("is-open");
+      body.style.overflow = "hidden";
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("is-open");
+      body.style.overflow = "initial";
+    };
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > window.innerHeight / 3 && !isOpened) {
+        isOpened = true;
+        scrollDown.style.display = "none";
+        openModal();
+      }
+    });
+
+    modalButton.addEventListener("click", openModal);
+    closeButton.addEventListener("click", closeModal);
+
+    document.onkeydown = evt => {
+      evt = evt || window.event;
+      evt.keyCode === 27 ? closeModal() : false;
+    };
+  </script>
+  <script src="script.js"></script>
 
 </body>
 

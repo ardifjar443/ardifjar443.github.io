@@ -62,7 +62,7 @@ body {
     font-size: 26px;
     margin: 0;
     font-weight: 400;
-    color: #55311c;
+    color: black;
 }
 
 .modal-desc {
@@ -83,7 +83,7 @@ body {
 }
 
 .modal-button {
-    color: #7d695e;
+    color: white;
     font-family: "Nunito", sans-serif;
     font-size: 18px;
     cursor: pointer;
@@ -91,7 +91,7 @@ body {
     outline: 0;
     padding: 10px 40px;
     border-radius: 30px;
-    background: white;
+    background: blue;
     -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
     -webkit-transition: 0.3s;
@@ -100,7 +100,7 @@ body {
 
 .modal-button:hover {
     border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(68, 74, 156, 0.8);
 }
 
 .modal-right {
@@ -188,7 +188,7 @@ body {
     border: 0;
     color: #fff;
     border-radius: 4px;
-    background: #8c7569;
+    background: blue;
     font-family: "Nunito", sans-serif;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -196,7 +196,7 @@ body {
 }
 
 .input-button:hover {
-    background: #232d66;
+    background: #2e1f6e;
 }
 
 .input-label {
@@ -205,7 +205,7 @@ body {
     font-family: "Nunito", sans-serif;
     font-weight: 600;
     letter-spacing: 0.7px;
-    color: #8c7569;
+    color: #414141;
     -webkit-transition: 0.3s;
     transition: 0.3s;
 }
