@@ -3,8 +3,7 @@ const scriptURL =
 const form = document.forms['form'];
 const btnkirim = document.querySelector('.btn-kirim');
 const btnloading = document.querySelector('.btn-loading');
-let popup = document.getElementById("popup");
-let popup2 = document.getElementById("popup2");
+const myalert = document.querySelector('.my-alert')
 
 // // navbar
 // const navLinks = document.querySelectorAll('.nav-item')
@@ -16,14 +15,6 @@ let popup2 = document.getElementById("popup2");
 //     })
 // })
 // // end navbar
-
-function openPopup() {
-    popup.classList.add("open-popup")
-}
-
-function closePopup() {
-    popup.classList.remove("open-popup")
-}
 
 function closePopup2() {
     popup2.classList.remove("open-popup2")
@@ -45,8 +36,7 @@ form.addEventListener('submit', e => {
             btnkirim.classList.toggle('d-none');
             form.reset();
             console.log('Success!', response)
-            popup.classList.remove("open-popup")
-            popup2.classList.add("open-popup2")
+            myalert.classList.toggle('d-none');
         })
         .catch(error => console.error('Error!', error.mesimage.pngsage))
 })
