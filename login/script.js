@@ -56,7 +56,7 @@ function Login() {
     if (user == "ardifjar443@gmail.com" && pass == "ratuayunurfajar") {
         window.location.href = "./isi"
     } else if (user == "ratua4820@gmail.com" && pass == "ardifajararifin") {
-        window.location.href = "./isi"
+        window.location.href = "./secret"
     } else {
         alert("username dan password anda salah")
     }
