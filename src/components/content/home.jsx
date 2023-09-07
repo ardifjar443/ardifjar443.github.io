@@ -80,7 +80,7 @@ function Home({ activeTab, setActiveTab }) {
         </div>
       </section>
       <Skills />
-      <Content />
+      <Content activeTab={activeTab} setActiveTab={setActiveTab} />
     </>
   );
 }

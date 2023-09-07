@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./project.css";
 
-const Content = () => {
+const Content = ({ activeTab, setActiveTab }) => {
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleViewMore = () => {
@@ -22,18 +26,25 @@ const Content = () => {
     {
       image: "./img/headhunting.png",
       title: "CV Bisa Dilihat atau Didownload",
+      link: null,
     },
     {
       image: "./img/algebra.png",
       title: "Belajar Algebra Menggunakan Python",
+      link: () => {
+        // Fungsi yang akan dipanggil saat diklik
+        handleTabClick("Algebra");
+      },
     },
     {
       image: "./img/cheating.png",
       title: "Cheat Sheets",
+      link: null,
     },
     {
       image: "./img/machine-learning.png",
       title: "Belajar Machine Learning",
+      link: null,
     },
   ];
 
@@ -54,7 +65,7 @@ const Content = () => {
           </h1>
           <div className="expandable-div" id="expandableDiv">
             <div className="row">
-              {slides.map((slides, index) => (
+              {slides.map((slide, index) => (
                 <div className="col-md-6 mb-3" key={index}>
                   <div className="">
                     <div className="card-body bg-light rounded-4 p-4">
@@ -63,22 +74,50 @@ const Content = () => {
                         href="./cv/ilovepdf_merged.pdf"
                         style={{ height: "300px" }}
                       >
-                        <h4 className="card-title mb-3">{slides.title}</h4>
+                        <h4 className="card-title mb-3">{slide.title}</h4>
                         <img
-                          src={slides.image}
+                          src={slide.image}
                           width="150px"
                           height="150px"
                           alt=""
                           className=""
                         />
                         <div className="d-grid gap-2 mt-5">
-                          <button
-                            className="btn btn-primary"
-                            type="button"
-                            style={{ backgroundColor: "#078080" }}
-                          >
-                            Lihat Content
-                          </button>
+                          {slide.link && typeof slide.link === "string" ? (
+                            <a
+                              href={slide.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <div className="d-grid gap-2">
+                                <button
+                                  className="btn"
+                                  style={{
+                                    color: "white",
+                                    backgroundColor: "#078080",
+                                  }}
+                                >
+                                  Lihat Content
+                                </button>
+                              </div>
+                            </a>
+                          ) : (
+                            slide.link &&
+                            typeof slide.link === "function" && (
+                              <div className="d-grid gap-2">
+                                <button
+                                  onClick={slide.link}
+                                  className="btn"
+                                  style={{
+                                    color: "white",
+                                    backgroundColor: "#078080",
+                                  }}
+                                >
+                                  lihat Content
+                                </button>
+                              </div>
+                            )
+                          )}
                         </div>
                       </div>
                     </div>

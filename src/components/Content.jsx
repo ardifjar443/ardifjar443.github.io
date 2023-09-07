@@ -4,7 +4,8 @@ import "./Content.css"; // Import file CSS dengan animasi
 import "./ContentAnimation.css"; // Import file CSS animasi
 import Home from "./content/home";
 import Contact from "./content/contact";
-import Percobaan from "./content/percobaan";
+import Algebra from "./content/Algebra";
+import Quotes from "./content/quotes";
 
 function Content({ activeTab, setActiveTab }) {
   return (
@@ -27,12 +28,20 @@ function Content({ activeTab, setActiveTab }) {
         <Contact activeTab={activeTab} setActiveTab={setActiveTab} />
       </CSSTransition>
       <CSSTransition
-        in={activeTab === "percobaan"} // Aktifkan animasi jika activeTab adalah "contact"
+        in={activeTab === "Algebra"} // Aktifkan animasi jika activeTab adalah "contact"
         timeout={300} // Durasi animasi (dalam milidetik)
         classNames="slide" // Nama kelas CSS untuk animasi
         unmountOnExit
       >
-        <Percobaan activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Algebra activeTab={activeTab} setActiveTab={setActiveTab} />
+      </CSSTransition>
+      <CSSTransition
+        in={activeTab === "Quotes"} // Aktifkan animasi jika activeTab adalah "contact"
+        timeout={300} // Durasi animasi (dalam milidetik)
+        classNames="slide" // Nama kelas CSS untuk animasi
+        unmountOnExit
+      >
+        <Quotes />
       </CSSTransition>
     </div>
   );

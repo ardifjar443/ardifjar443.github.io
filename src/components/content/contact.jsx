@@ -146,11 +146,11 @@ function Contact({ activeTab, setActiveTab }) {
         </div>
       </div>
 
-      <div className=" d-flex justify-content-center">
-        <div className="container">
-          <div className="d-grid gap-2">
+      <div className=" d-flex justify-content-center ">
+        <div className="container ">
+          <div className="d-grid">
             <a
-              className={`fs-3 btn border border-black border-3 ${
+              className={`fs-3 d-flex justify-content-center p-2 rounded-top-5${
                 activeTab === "home"
                   ? "text-light rounded-2 p-2 border border-5 border-black"
                   : ""
@@ -158,7 +158,11 @@ function Contact({ activeTab, setActiveTab }) {
               href="#"
               id="content"
               onClick={() => handleTabClick("home")}
-              style={{ backgroundColor: "#078080", color: "white" }}
+              style={{
+                backgroundColor: "#078080",
+                color: "white",
+                textDecoration: "none",
+              }}
             >
               Back to Home
             </a>

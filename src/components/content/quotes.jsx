@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-const Percobaan = () => {
+const Quotes = () => {
   const [htmlContent, setHtmlContent] = useState("");
 
   useEffect(() => {
-    fetch("./algebra/proportions.html")
+    fetch("./quote/index.html")
       .then((response) => response.text())
       .then((data) => setHtmlContent(data));
   }, []);
@@ -12,4 +12,4 @@ const Percobaan = () => {
   return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
 };
 
-export default Percobaan;
+export default Quotes;

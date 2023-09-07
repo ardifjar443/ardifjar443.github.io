@@ -18,7 +18,7 @@ function Slider({ activeTab, setActiveTab }) {
       teknologi: ["HTML", "CSS", "JavaScript"],
       link: () => {
         // Fungsi yang akan dipanggil saat diklik
-        handleTabClick("percobaan");
+        handleTabClick("Quotes");
       }, // Ini adalah tautan ke halaman web
     },
     {
