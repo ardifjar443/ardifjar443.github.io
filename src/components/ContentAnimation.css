@@ -1,0 +1,20 @@
+/* ContentAnimation.css */
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-enter {
+  animation: slide-in 0.6s forwards;
+  -webkit-animation: slide-in 0.6s forwards;
+}
+
+.slide-exit {
+  animation: slide-in 0.6s reverse forwards;
+  -webkit-animation: slide-in 0.6s reverse forwards;
+}

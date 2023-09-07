@@ -1,0 +1,23 @@
+.isiProject {
+  display: block;
+}
+
+.judul {
+  float: left;
+}
+
+.tipe {
+  float: right;
+  color: #078080;
+}
+
+.listBtnProject {
+  background-color: #f8f5f2;
+}
+
+.fotoProject {
+  width: 100px;
+}
+.lihatProject {
+  background-color: red;
+}

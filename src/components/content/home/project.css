@@ -1,0 +1,5 @@
+.expandable-div {
+  overflow: hidden;
+  max-height: 450px; /* Initial height */
+  transition: max-height 0.5s ease;
+}
