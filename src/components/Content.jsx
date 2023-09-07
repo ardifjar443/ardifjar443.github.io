@@ -15,7 +15,7 @@ function Content({ activeTab, setActiveTab }) {
         classNames="slide" // Nama kelas CSS untuk animasi
         unmountOnExit
       >
-        <Home />
+        <Home activeTab={activeTab} setActiveTab={setActiveTab} />
       </CSSTransition>
 
       <CSSTransition
@@ -32,7 +32,7 @@ function Content({ activeTab, setActiveTab }) {
         classNames="slide" // Nama kelas CSS untuk animasi
         unmountOnExit
       >
-        <Percobaan />
+        <Percobaan activeTab={activeTab} setActiveTab={setActiveTab} />
       </CSSTransition>
     </div>
   );

@@ -5,7 +5,10 @@ import Slider from "./home/sd";
 import Skills from "./home/Skills";
 import Content from "./home/Content";
 
-function Home() {
+function Home({ activeTab, setActiveTab }) {
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
   return (
     <>
       <section
@@ -46,10 +49,10 @@ function Home() {
           </div>
         </div>
       </section>
+      <div id="about" className="m-5" style={{ height: "50px" }}></div>
       <section
         className="about p-5 text-center rounded-top-5 mt-5"
         style={{ backgroundColor: "#feefe8" }}
-        id="about"
       >
         <div className="r rounded-5">
           <br />
@@ -71,7 +74,7 @@ function Home() {
             </div>
             <div className="col-md mb-3">
               <p className="fs-1">Project</p>
-              <Slider />
+              <Slider activeTab={activeTab} setActiveTab={setActiveTab} />
             </div>
           </div>
         </div>

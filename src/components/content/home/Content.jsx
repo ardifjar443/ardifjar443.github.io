@@ -55,7 +55,7 @@ const Content = () => {
           <div className="expandable-div" id="expandableDiv">
             <div className="row">
               {slides.map((slides, index) => (
-                <div className="col-md-6 mb-3" id={index}>
+                <div className="col-md-6 mb-3" key={index}>
                   <div className="">
                     <div className="card-body bg-light rounded-4 p-4">
                       <div
@@ -71,9 +71,9 @@ const Content = () => {
                           alt=""
                           className=""
                         />
-                        <div class="d-grid gap-2 mt-5">
+                        <div className="d-grid gap-2 mt-5">
                           <button
-                            class="btn btn-primary"
+                            className="btn btn-primary"
                             type="button"
                             style={{ backgroundColor: "#078080" }}
                           >

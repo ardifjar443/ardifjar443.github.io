@@ -107,7 +107,7 @@ function Contact({ activeTab, setActiveTab }) {
                 required
               ></textarea>
             </div>
-            <div class="d-grid gap-2">
+            <div className="d-grid gap-2">
               <button
                 type="submit"
                 className="btn btn-kirim mb-5"
