@@ -20,7 +20,13 @@ function AppNavbar({ activeTab, setActiveTab }) {
     >
       <Container fluid>
         <Navbar.Brand className="fs-2 fw-bold" href="#" id="ehe">
-          ArdiFjar443
+          <button
+            onClick={() => handleTabClick("home")}
+            style={{ border: "none" }}
+            className=" bg-light"
+          >
+            ArdiFjar443
+          </button>
           <span className="me-5 ms-2 text-secondary fs-4">{activeTab}</span>
         </Navbar.Brand>
 

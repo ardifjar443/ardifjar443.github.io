@@ -1,54 +1,121 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "./quote.css";
 
-const QuoteBox = ({ text, author, onClick }) => {
+const QuoteBox = ({ quotes, setLanguage, language }) => {
+  const [randomQuote, setRandomQuote] = useState(null);
+  const [backgroundColor, setBackgroundColor] = useState("white");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true); // Set isLoading ke true saat halaman dimuat
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Setelah 1 detik, matikan loading
+      getRandomQuote(); // Ambil kutipan acak saat loading selesai
+    }, 1000);
+
+    return () => clearTimeout(timer); // Bersihkan timer saat komponen di-unmount
+  }, []); // Efek ini hanya dijalankan sekali saat komponen dimuat
+
+  const getRandomQuote = () => {
+    setIsLoading(true); // Set isLoading kembali ke true saat tombol ditekan
+    const filteredQuotes = quotes.filter((quote) => quote.length < 150);
+    const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
+
+    setTimeout(() => {
+      setRandomQuote(filteredQuotes[randomIndex]);
+      setIsLoading(false); // Matikan loading setelah mendapatkan kutipan baru
+    }, 1000);
+
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+      Math.random() * 256
+    )}, ${Math.floor(Math.random() * 256)})`;
+    setBackgroundColor(randomColor);
+  };
+
   return (
-    <div
-      className="container min-vh-100 d-flex justify-content-center align-items-center"
-      id="quote-box"
-    >
-      <div
-        className="justify-content-center align-items-center "
-        style={{ backgroundColor: "white", width: "90%" }}
-      >
-        <div className="text fs-3 m-5 mb-2" id="quote-text">
-          <i className="fa fa-quote-left" id="tandaPetik"></i>{" "}
-          <span id="text">{text}</span>
-        </div>
+    <>
+      {isLoading ? (
+        // Tampilkan elemen loading saat isLoading bernilai true
         <div
-          className="author justify-content-end d-flex me-5 fs-5"
-          id="author"
-        >{`~${author}`}</div>
-        <div className="buttons mb-2 ms-2">
-          <div className="d-flex m-3 d-flex justify-content-center align-items-center mt-5">
-            <div className="w-100">
-              <button
-                className="btn mb-2"
-                style={{ color: "white", width: "50px", height: "40px" }}
-                onClick={onClick}
-              >
-                New quotes
-              </button>
-              {/* Tambahkan tombol-tombol lain di sini */}
-            </div>
-            <div className="" style={{ width: "50%", justifyContent: "end" }}>
-              <button
-                className="btn button"
-                style={{ color: "white", height: "100%", width: "100%" }}
-              >
-                Lihat Content
-              </button>
-            </div>
-          </div>
+          className="min-vh-100 d-flex align-items-center justify-content-center quote-container"
+          style={{ backgroundColor: backgroundColor }}
+        >
           <div
-            className="footer justify-content-center align-item-center d-flex p-3"
-            id="footer"
-            style={{ color: "white" }}
+            className="bg-light p-5 rounded-4 fs-3"
+            style={{ color: backgroundColor }}
           >
-            By Ardi Fajar Arifin
+            {language == "en" ? "Loading..." : "Sebentar.."}
           </div>
+        </div>
+      ) : (
+        <div
+          style={{ backgroundColor: backgroundColor }}
+          className="min-vh-100 d-flex align-items-center justify-content-center p-3 quote-container"
+        >
+          <div
+            className={`quote ${
+              randomQuote ? "fade-in" : ""
+            } bg-light p-5 rounded-4`}
+          >
+            {randomQuote && (
+              <div key={randomQuote.id}>
+                <p
+                  className="text-start fs-4"
+                  style={{ color: backgroundColor }}
+                >
+                  <i className="fa fa-quote-left" id="tandaPetik"></i>{" "}
+                  {randomQuote.text}
+                </p>
+                <p className="text-end fs-5" style={{ color: backgroundColor }}>
+                  - {randomQuote.source}
+                </p>
+              </div>
+            )}
+            <button
+              onClick={getRandomQuote}
+              className="btn fs-4 fw-bold"
+              style={{ backgroundColor: backgroundColor, color: "white" }}
+            >
+              {language == "en" ? "New Quote" : "Quote Baru"}
+            </button>
+          </div>
+        </div>
+      )}
+      <div
+        style={{ backgroundColor: backgroundColor }}
+        className="quote-container"
+      >
+        <div
+          className="p-2 rounded-top-5 "
+          style={{ backgroundColor: "#078080" }}
+        >
+          <button
+            onClick={() => {
+              setLanguage("en");
+            }}
+            className=" fs-4"
+            style={
+              language === "en"
+                ? { backgroundColor: "#078080", color: "white", border: "none" }
+                : { backgroundColor: "#078080", border: "none" }
+            }
+          >
+            English
+          </button>
+          <button
+            onClick={() => setLanguage("id")}
+            className=" fs-4"
+            style={
+              language === "id"
+                ? { backgroundColor: "#078080", color: "white", border: "none" }
+                : { backgroundColor: "#078080", border: "none" }
+            }
+          >
+            Indonesian
+          </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

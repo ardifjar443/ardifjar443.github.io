@@ -41,7 +41,7 @@ function Content({ activeTab, setActiveTab }) {
         classNames="slide" // Nama kelas CSS untuk animasi
         unmountOnExit
       >
-        <Quotes />
+        <Quotes activeTab={activeTab} setActiveTab={setActiveTab} />
       </CSSTransition>
     </div>
   );

@@ -1,0 +1,11 @@
+.quote-container {
+  transition: background-color 0.5s ease; /* Animasi transisi latar belakang */
+}
+
+.quote {
+  transition: opacity 0.5s ease; /* Animasi transisi opasitas */
+}
+
+.fade-in {
+  opacity: 1 !important;
+}

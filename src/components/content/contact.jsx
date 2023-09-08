@@ -45,7 +45,10 @@ function Contact({ activeTab, setActiveTab }) {
   };
   return (
     <>
-      <div className="   min-vh-100 d-flex justify-content-center align-items-center">
+      <div
+        className="   min-vh-100 d-flex justify-content-center align-items-center"
+        style={{ backgroundColor: "#feefe8" }}
+      >
         <div className="bg-light container border border-5 border-black rounded-3 p-5">
           <h1 className="modal-title" style={{ color: "#183D3D" }}>
             Selamat Datang!
@@ -146,9 +149,12 @@ function Contact({ activeTab, setActiveTab }) {
         </div>
       </div>
 
-      <div className=" d-flex justify-content-center ">
+      <div
+        className=" d-flex justify-content-center "
+        style={{ backgroundColor: "#feefe8" }}
+      >
         <div className="container ">
-          <div className="d-grid">
+          <div className=" d-flex justify-content-center">
             <a
               className={`fs-3 d-flex justify-content-center p-2 rounded-top-5${
                 activeTab === "home"
@@ -162,6 +168,7 @@ function Contact({ activeTab, setActiveTab }) {
                 backgroundColor: "#078080",
                 color: "white",
                 textDecoration: "none",
+                width: "80%",
               }}
             >
               Back to Home
