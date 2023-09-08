@@ -4,7 +4,11 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <div style={{ backgroundColor: "#feefe8" }}>
+      <div
+        style={{
+          backgroundColor: "#feefe8",
+        }}
+      >
         <footer className="footer rounded-5">
           <div className="container">
             <br />
