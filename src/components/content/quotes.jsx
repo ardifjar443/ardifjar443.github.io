@@ -12,7 +12,8 @@ function Quotes({ activeTab, setActiveTab }) {
   };
 
   const [data, setData] = useState(null);
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("id");
+  const [isLoading, setIsLoading] = useState(true); // Tambahkan state isLoading
 
   const jsonLinks = {
     en: "https://gist.githubusercontent.com/ardifjar443/c576fba951542cf9fbb43d2e22aaa4cd/raw/85ab102fd4be69ba5db130e94fe1e27bff81ba75/english.json",
@@ -20,10 +21,18 @@ function Quotes({ activeTab, setActiveTab }) {
   };
 
   const fetchData = (language) => {
+    setIsLoading(true); // Set isLoading menjadi true saat memulai pengambilan data
+
     fetch(jsonLinks[language])
       .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Error:", error));
+      .then((data) => {
+        setData(data);
+        setIsLoading(false); // Set isLoading menjadi false saat data berhasil diambil
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setIsLoading(false); // Set isLoading menjadi false jika terjadi kesalahan
+      });
   };
 
   useEffect(() => {
@@ -33,12 +42,23 @@ function Quotes({ activeTab, setActiveTab }) {
   return (
     <>
       <div className="App">
-        {data && (
-          <QuotesBox
-            quotes={data.quotes}
-            setLanguage={setLanguage}
-            language={language}
-          />
+        {isLoading ? ( // Tampilkan pesan loading jika isLoading true
+          <div
+            className="min-vh-100 d-flex align-items-center justify-content-center"
+            style={{ backgroundColor: "#feefe8" }}
+          >
+            <div className="bg-light text-dark fs-3 p-5 rounded-4">
+              {language === "en" ? "Loading..." : "Tunggu Sebentar..."}
+            </div>
+          </div>
+        ) : (
+          data && (
+            <QuotesBox
+              quotes={data.quotes}
+              setLanguage={setLanguage}
+              language={language}
+            />
+          )
         )}
       </div>
       <div style={{ backgroundColor: "#078080" }}>
