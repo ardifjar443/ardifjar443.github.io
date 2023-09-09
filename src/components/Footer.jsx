@@ -36,7 +36,7 @@ const Footer = ({ activeTab, setActiveTab }) => {
             </button>
           </div>
 
-          <div className=" d-grid ">
+          <div className=" d-grid " style={{ backgroundColor: "#feefe8" }}>
             <button
               className="fs-3 text-light rounded-top-5"
               style={{ backgroundColor: "#078080", border: "none" }}
