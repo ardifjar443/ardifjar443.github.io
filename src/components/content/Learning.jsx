@@ -14,7 +14,19 @@ const Learning = ({ activeTab, setActiveTab, pdfSource, setPdfSource }) => {
       html: "proportions",
       materi: "Algebra",
     },
+
     { title: "solving for x", html: "solving-for-x", materi: "Algebra" },
+    {
+      title: "solving for x extra",
+      html: "solving-for-x-extra",
+      materi: "Algebra",
+    },
+    {
+      title: "Fractions and Decimal",
+      html: "Fractions-and-Decimals",
+      materi: "Algebra",
+    },
+
     {
       title: "Pandas",
       pdf: "./cheatSheet/Pandas_Cheat_Sheet.pdf",
@@ -23,6 +35,41 @@ const Learning = ({ activeTab, setActiveTab, pdfSource, setPdfSource }) => {
     {
       title: "Numpy",
       pdf: "./cheatSheet/Numpy_Cheat_Sheet.pdf",
+      materi: "cheatSheet",
+    },
+    {
+      title: "Matplotlib",
+      pdf: "./cheatSheet/cheatsheetsMatplotlib.pdf",
+      materi: "cheatSheet",
+    },
+    {
+      title: "Matplotlib for beginner",
+      pdf: "./cheatSheet/handout-beginner.pdf",
+      materi: "cheatSheet",
+    },
+    {
+      title: "Matplotlib for intermediate",
+      pdf: "./cheatSheet/handout-intermediate.pdf",
+      materi: "cheatSheet",
+    },
+    {
+      title: "Matplotlib tips",
+      pdf: "./cheatSheet/handout-tips.pdf",
+      materi: "cheatSheet",
+    },
+    {
+      title: "Sympy",
+      pdf: "./cheatSheet/gloo13_sympy.pdf",
+      materi: "cheatSheet",
+    },
+    {
+      title: "linear algebra with Sympy",
+      pdf: "./cheatSheet/linear-algebra-sympy.pdf",
+      materi: "cheatSheet",
+    },
+    {
+      title: "Java Script",
+      pdf: "./cheatSheet/js.pdf",
       materi: "cheatSheet",
     },
   ];
@@ -56,8 +103,8 @@ const Learning = ({ activeTab, setActiveTab, pdfSource, setPdfSource }) => {
   return (
     <>
       <div className="min-vh-100 d-flex align-items-center">
-        <div className="container" style={{ backgroundColor: "#f8f5f2" }}>
-          <p className="mt-3 fw-bold fs-3 text-center">Soft Skills</p>
+        <div className="container bg-light rounded-4 border border-5 border-black">
+          <p className="mt-3 fw-bold fs-3 text-center">{activeTab}</p>
           <div className="row ">
             {slidesFilter.map((slides, index) => (
               <div className="col-lg-3 col-6 mb-3" key={index}>
@@ -68,17 +115,20 @@ const Learning = ({ activeTab, setActiveTab, pdfSource, setPdfSource }) => {
                         handleClick(slides.html);
                         scroolToHtml();
                       }}
+                      className="btn"
+                      style={{ backgroundColor: "#078080", color: "white" }}
                     >
                       {slides.title}
                     </button>
                   ) : (
                     <>
                       <button
-                        className="btn btn-primary"
+                        className="btn"
                         onClick={() => {
                           handleChangeSource(slides.pdf);
                           handleTabClick("pdfViewer");
                         }}
+                        style={{ backgroundColor: "#078080", color: "white" }}
                       >
                         {slides.title}
                       </button>
