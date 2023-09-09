@@ -32,7 +32,7 @@ const Learning = ({ activeTab, setActiveTab, pdfSource, setPdfSource }) => {
   const [htmlContent, setHtmlContent] = useState(null);
 
   const loadHtmlContent = (fileName) => {
-    fetch(`./${activeTab}/${fileName}.html`)
+    fetch(`./${activeTab.toLowerCase()}/${fileName}.html`)
       .then((response) => response.text())
       .then((data) => setHtmlContent(data));
   };
