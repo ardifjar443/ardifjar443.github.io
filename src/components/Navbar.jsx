@@ -27,7 +27,6 @@ function AppNavbar({ activeTab, setActiveTab }) {
           >
             ArdiFjar443
           </button>
-          <span className="me-5 ms-2 text-secondary fs-4">{activeTab}</span>
         </Navbar.Brand>
 
         <Navbar.Toggle

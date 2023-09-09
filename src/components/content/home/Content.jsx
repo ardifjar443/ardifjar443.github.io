@@ -5,6 +5,12 @@ const Content = ({ activeTab, setActiveTab }) => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -34,12 +40,16 @@ const Content = ({ activeTab, setActiveTab }) => {
       link: () => {
         // Fungsi yang akan dipanggil saat diklik
         handleTabClick("Algebra");
+        scrollToTop();
       },
     },
     {
       image: "./img/cheating.png",
       title: "Cheat Sheets",
-      link: null,
+      link: () => {
+        handleTabClick("cheatSheet");
+        scrollToTop();
+      },
     },
     {
       image: "./img/machine-learning.png",

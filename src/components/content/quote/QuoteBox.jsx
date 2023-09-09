@@ -58,15 +58,15 @@ const QuoteBox = ({ quotes, setLanguage, language }) => {
       >
         <div
           className="p-2 rounded-top-5 "
-          style={{ backgroundColor: "#078080" }}
+          style={{ backgroundColor: "#f8f5f2" }}
         >
           <button
             onClick={() => setLanguage("en")}
             className=" fs-4"
             style={
               language == "en"
-                ? { backgroundColor: "#078080", color: "white", border: "none" }
-                : { backgroundColor: "#078080", border: "none" }
+                ? { backgroundColor: "#f8f5f2", color: "black", border: "none" }
+                : { backgroundColor: "#f8f5f2", color: "white", border: "none" }
             }
           >
             English
@@ -76,8 +76,8 @@ const QuoteBox = ({ quotes, setLanguage, language }) => {
             className=" fs-4"
             style={
               language == "id"
-                ? { backgroundColor: "#078080", color: "white", border: "none" }
-                : { backgroundColor: "#078080", border: "none" }
+                ? { backgroundColor: "#f8f5f2", color: "black", border: "none" }
+                : { backgroundColor: "#f8f5f2", color: "white", border: "none" }
             }
           >
             Indonesian

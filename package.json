@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.1",
+    "pspdfkit": "^2023.4.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
+    "react-pdf": "^7.3.3",
+    "react-pdf-js": "^5.1.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.15.0",
     "react-transition-group": "^4.4.5"

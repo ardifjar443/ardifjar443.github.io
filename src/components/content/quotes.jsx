@@ -67,20 +67,7 @@ function Quotes({ activeTab, setActiveTab }) {
             ? { backgroundColor: "#feefe8" }
             : { backgroundColor: "#078080" }
         }
-      >
-        <div className=" d-grid">
-          <button
-            className="rounded-top-5 p-2 fs-3 "
-            style={{
-              backgroundColor: "#feefe8",
-              border: "none",
-            }}
-            onClick={() => handleTabClick("home")}
-          >
-            Back To Home
-          </button>
-        </div>
-      </div>
+      ></div>
     </>
   );
 }

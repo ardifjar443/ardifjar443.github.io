@@ -1,15 +1,61 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({ activeTab, setActiveTab }) => {
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
+      {activeTab === "home" ? (
+        <div className=" d-grid " style={{ backgroundColor: "#feefe8" }}>
+          <button
+            className="fs-3 text-light rounded-top-5"
+            style={{ backgroundColor: "#078080", border: "none" }}
+            onClick={scrollToTop}
+          >
+            Back to Top
+          </button>
+        </div>
+      ) : (
+        <>
+          <div className=" d-grid ">
+            <button
+              className="fs-3 text-light rounded-top-5 text-dark"
+              style={{ backgroundColor: "#feefe8", border: "none" }}
+              onClick={scrollToTop}
+            >
+              {activeTab}
+            </button>
+          </div>
+
+          <div className=" d-grid ">
+            <button
+              className="fs-3 text-light rounded-top-5"
+              style={{ backgroundColor: "#078080", border: "none" }}
+              onClick={() => {
+                handleTabClick("home");
+                scrollToTop();
+              }}
+            >
+              Back To Home
+            </button>
+          </div>
+        </>
+      )}
       <div
         style={{
-          backgroundColor: "#feefe8",
+          backgroundColor: "#078080",
         }}
       >
-        <footer className="footer rounded-5">
+        <footer className="footer rounded-top-5">
           <div className="container">
             <br />
             <div className="row">

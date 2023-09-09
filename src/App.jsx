@@ -14,7 +14,7 @@ function App() {
     <div style={{ fontFamily: "Ubuntu Mono", backgroundColor: "#f8f5f2" }}>
       <AppNavbar activeTab={activeTab} setActiveTab={setActiveTab} />
       <Content activeTab={activeTab} setActiveTab={setActiveTab} />
-      <Footer />
+      <Footer activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   );
 }
