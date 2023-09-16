@@ -1,6 +1,6 @@
 # Web Portofolio
 
-web bisa diakses melalui [link](https://ardifjar443.github.io)
+web bisa diakses melalui [link](https://ardifjar443.github.io) ini
 
 web ini menggunakan :
 
