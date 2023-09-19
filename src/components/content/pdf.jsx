@@ -44,7 +44,17 @@ export default function PDFViewer(props) {
         style={{ width: "100%", height: "100vh" }}
       />
       <div className=" d-grid">
+        {props.activeTab === "cv" ? 
         <button
+          className="btn btn-light fs-3 rounded-top-5"
+          onClick={() => {
+            handleTabClick("home");
+            scrollToTop();
+          }}
+        >
+          Back to Home
+        </button> : 
+          <button
           className="btn btn-light fs-3 rounded-top-5"
           onClick={() => {
             handleTabClick("cheatSheet");
@@ -53,6 +63,7 @@ export default function PDFViewer(props) {
         >
           Back to Cheat Sheet
         </button>
+        }
       </div>
     </>
   );

@@ -74,6 +74,18 @@ function Content({ activeTab, setActiveTab }) {
           activeTab={activeTab}
         />
       </CSSTransition>
+      <CSSTransition
+        in={activeTab === "cv"} // Aktifkan animasi jika activeTab adalah "contact"
+        timeout={300} // Durasi animasi (dalam milidetik)
+        classNames="slide" // Nama kelas CSS untuk animasi
+        unmountOnExit
+      >
+        <PDFViewer
+          document={"./cv/cv.pdf"}
+          setActiveTab={setActiveTab}
+          activeTab={activeTab}
+        />
+      </CSSTransition>
     </div>
   );
 }

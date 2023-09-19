@@ -10,7 +10,7 @@ const QuoteBox = ({ quotes, setLanguage, language }) => {
     const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
 
     setRandomQuote(filteredQuotes[randomIndex]);
-
+    
     const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
       Math.random() * 256
     )}, ${Math.floor(Math.random() * 256)})`;

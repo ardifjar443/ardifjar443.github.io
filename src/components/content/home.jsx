@@ -29,13 +29,24 @@ function Home({ activeTab, setActiveTab }) {
               <p style={{ color: "#222525" }} className="fs-4">
                 Mahasiswa IT
               </p>
+              
               <a
-                href="#about"
-                className="btn fs-5"
+                href="#home"
+                className="btn fs-5 m-3"
                 style={{ backgroundColor: "#078080", color: "white" }}
                 id="ehe"
               >
                 About Me
+              </a>
+              <a
+                onClick={() => {
+                  handleTabClick("cv")
+                }}
+                className="btn fs-5"
+                style={{ backgroundColor: "#078080", color: "white" }}
+                id="ehe"
+              >
+                CV
               </a>
             </div>
             <div className="col-lg-5 order-lg-2 order-1 mb-5 mt-5 rounded-5 container-foto border border-black border-5">
@@ -80,7 +91,8 @@ function Home({ activeTab, setActiveTab }) {
         </div>
       </section>
       <Skills />
-      <Content activeTab={activeTab} setActiveTab={setActiveTab} />
+      <div id="content1"></div>
+      <Content  activeTab={activeTab} setActiveTab={setActiveTab} />
     </>
   );
 }

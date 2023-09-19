@@ -32,7 +32,10 @@ const Content = ({ activeTab, setActiveTab }) => {
     {
       image: "./img/headhunting.png",
       title: "CV Bisa Dilihat atau Didownload",
-      link: null,
+      link: () => {
+        handleTabClick("cv");
+        scrollToTop();
+      },
     },
     {
       image: "./img/algebra.png",

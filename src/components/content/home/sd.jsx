@@ -41,6 +41,16 @@ function Slider({ activeTab, setActiveTab }) {
       teknologi: ["HTML", "CSS", "JavaScript", "React js"],
       link: null,
     },
+    {
+      image: "./img/frontEnd.png",
+      title: "certification FE FreeCodeCamp",
+      description: "source code sertifikasi front end di freecodecamp",
+      clickEvent: "sliderClick",
+      judul: "certification",
+      tipe: "WEB",
+      teknologi: ["HTML","CSS","React js"],
+      link: "https://github.com/ardifjar443/Front-End-Development-Libraries-certification-freeCodeCamp", // Tidak ada tautan karena ini bukan tautan ke halaman web
+    },
   ];
 
   return (
