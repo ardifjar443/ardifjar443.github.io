@@ -51,6 +51,16 @@ function Slider({ activeTab, setActiveTab }) {
       teknologi: ["HTML","CSS","React js"],
       link: "https://github.com/ardifjar443/Front-End-Development-Libraries-certification-freeCodeCamp", // Tidak ada tautan karena ini bukan tautan ke halaman web
     },
+    {
+      image: "https://img.freepik.com/premium-vector/comic-book-explosion_726294-66.jpg",
+      title: "Angka Boom",
+      description: "Sebuah Project sederhana untuk permainan angka boom dimana user tidak boleh menebak angka boom tersebut",
+      clickEvent: "sliderClick",
+      judul: "AngkaBoom",
+      tipe: "WEB",
+      teknologi: ["HTML","CSS","React js"],
+      link: "https://ardifjar443.github.io/angka-boom/", // Tidak ada tautan karena ini bukan tautan ke halaman web
+    },
   ];
 
   return (
