@@ -57,7 +57,7 @@ const Content = ({ activeTab, setActiveTab }) => {
     {
       image: "./img/machine-learning.png",
       title: "Belajar Machine Learning",
-      link: null,
+      link: "https://github.com/ardifjar443/belajarMachineLearning",
     },
   ];
 
