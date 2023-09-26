@@ -52,7 +52,7 @@ function Slider({ activeTab, setActiveTab }) {
       link: "https://github.com/ardifjar443/Front-End-Development-Libraries-certification-freeCodeCamp", // Tidak ada tautan karena ini bukan tautan ke halaman web
     },
     {
-      image: "https://img.freepik.com/premium-vector/comic-book-explosion_726294-66.jpg",
+      image: "./img/angkaBoom.png",
       title: "Angka Boom",
       description: "Sebuah Project sederhana untuk permainan angka boom dimana user tidak boleh menebak angka boom tersebut",
       clickEvent: "sliderClick",
