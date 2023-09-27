@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+
 
 function AppNavbar({ activeTab, setActiveTab }) {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
+  const [data, setData] = useState('')
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     setIsNavExpanded(false); // Menutup navbar pada tampilan mobile setelah tautan diklik
   };
+  
+ 
+  
+
+ 
 
   return (
     <Navbar

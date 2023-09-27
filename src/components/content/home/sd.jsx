@@ -63,6 +63,22 @@ function Slider({ activeTab, setActiveTab }) {
     },
   ];
 
+  const styleTech = (value) => {
+    const text = value.toUpperCase()
+    return {
+      backgroundColor : text === "HTML" ? "#FFA500" :
+              text === "CSS" ? '#0066CC':
+              text === "JAVASCRIPT" ? "#4CBB17": 
+              text === "REACT JS" ? "#61DBFB" :
+              text === "JAVA" ? "red": "black" ,
+              
+
+      color : "white"
+              
+
+    }
+  }
+
   return (
     <Carousel showIndicators={false} showStatus={false} showThumbs={false}>
       {slides.map((slide, index) => (
@@ -108,9 +124,12 @@ function Slider({ activeTab, setActiveTab }) {
             <div className=" listStack rounded-bottom-3 p-1 text-light listBtnProject">
               <div>
                 {slide.teknologi.map((tech, techIndex) => (
+                  
                   <a
                     key={techIndex}
-                    className="btn m-2 btn-secondary btnProject"
+                    className="btn m-2 btnProject"
+                    style={styleTech(tech)}
+                    
                   >
                     {tech}
                   </a>
