@@ -16,7 +16,7 @@ function Slider({ activeTab, setActiveTab }) {
       judul: "Web Berita",
       tipe: "WEB",
       teknologi: ["REACT JS", "LARAVEL", "SQL","TAILWIND"],
-      link: () => "https://web-berita-lime.vercel.app/", // Ini adalah tautan ke halaman web
+      link:  "https://web-berita-lime.vercel.app/", // Ini adalah tautan ke halaman web
     },
     {
       image: "./img/quotes.png",
