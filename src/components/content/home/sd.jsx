@@ -9,6 +9,16 @@ function Slider({ activeTab, setActiveTab }) {
 
   const slides = [
     {
+      image: "./img/berita.png",
+      title: "Web Berita",
+      description:
+        "Sebuah web berita interaktif meskipun masih sedikit untuk fitur nya",
+      judul: "Web Berita",
+      tipe: "WEB",
+      teknologi: ["REACT JS", "LARAVEL", "SQL","TAILWIND"],
+      link: () => "https://web-berita-lime.vercel.app/", // Ini adalah tautan ke halaman web
+    },
+    {
       image: "./img/quotes.png",
       title: "Quotes Generator",
       description:
@@ -70,7 +80,8 @@ function Slider({ activeTab, setActiveTab }) {
               text === "CSS" ? '#0066CC':
               text === "JAVASCRIPT" ? "#4CBB17": 
               text === "REACT JS" ? "#61DBFB" :
-              text === "JAVA" ? "red": "black" ,
+              text === "JAVA" ? "red" : text === "LARAVEL" ? "red": text === "TAILWIND" ? "#06b6d4":  "black" ,
+              
               
 
       color : "white"
