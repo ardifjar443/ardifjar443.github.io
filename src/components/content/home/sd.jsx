@@ -15,7 +15,7 @@ function Slider({ activeTab, setActiveTab }) {
         "Sebuah web berita interaktif meskipun masih sedikit untuk fitur nya",
       judul: "Web Berita",
       tipe: "WEB",
-      teknologi: ["REACT JS", "LARAVEL", "SQL","TAILWIND"],
+      teknologi: ["REACT JS", "LARAVEL","TAILWIND"],
       link:  "https://web-berita-lime.vercel.app/", // Ini adalah tautan ke halaman web
     },
     {
