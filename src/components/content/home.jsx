@@ -31,7 +31,7 @@ function Home({ activeTab, setActiveTab }) {
               </p>
               
               <a
-                href="#home"
+                href="#about"
                 className="btn fs-5 m-3"
                 style={{ backgroundColor: "#078080", color: "white" }}
                 id="ehe"
@@ -75,11 +75,8 @@ function Home({ activeTab, setActiveTab }) {
                   style={{ height: "300px" }}
                   className="d-flex align-items-center"
                 >
-                  Aku adalah seorang ultramen yang tinggal di indonesia lebih
-                  tepat nya saya tinggal di garut yang sedang menyamar menjadi
-                  mahasiswa di sebuah universitas di Bandung yang pastinya bukan
-                  ITB atau UNPAD, pada saat malam hari saya berubah menjadi
-                  ultramen dan mencari kejahatan di seluruh dunia.
+                  I am quick at learning new things, such as programming languages, frameworks, and libraries, which makes me quicker at adapting. I also like solving problems in coding. If I find code that has an error, I don't give up and will continue to look for a solution to the problem.
+
                 </p>
               </div>
             </div>

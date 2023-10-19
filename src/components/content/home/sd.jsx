@@ -12,7 +12,7 @@ function Slider({ activeTab, setActiveTab }) {
       image: "./img/berita.png",
       title: "Web Berita",
       description:
-        "Sebuah web berita interaktif meskipun masih sedikit untuk fitur nya",
+        "Sebuah web berita interaktif meskipun masih sedikit untuk fitur nya, dan data disini saya ngambil dari source lain saya gunain hanya untuk belajar saja",
       judul: "Web Berita",
       tipe: "WEB",
       teknologi: ["REACT JS", "LARAVEL","TAILWIND"],

@@ -19,6 +19,7 @@ const Skills = () => {
                         src="./img/data-science.png"
                         width="60px"
                         alt="Data Science"
+                        className="me-2"
                       />
                       Data Scientist
                     </h5>
@@ -36,6 +37,7 @@ const Skills = () => {
                         src="./img/full-stack.png"
                         width="60px"
                         alt="Full Stack Developer"
+                        className="me-2"
                       />
                       Full Stack Developer
                     </h5>
@@ -64,6 +66,7 @@ const Skills = () => {
                     src="./img/web-analytics.png"
                     width="40px"
                     alt="Data Visual"
+                    className="me-2"
                   />
                   Data Visual
                 </h5>
@@ -81,6 +84,7 @@ const Skills = () => {
                     src="./img/analysis.png"
                     width="40px"
                     alt="Data Analysis"
+                    className="me-2"
                   />
                   Data Analysis
                 </h5>
@@ -98,6 +102,7 @@ const Skills = () => {
                     src="./img/game-development.png"
                     width="40px"
                     alt="Game Developer"
+                    className="me-2"
                   />
                   Game Developer
                 </h5>
@@ -111,7 +116,7 @@ const Skills = () => {
                 className="card-body  d-flex align-items-center"
               >
                 <h5 className="card-title">
-                  <img src="./img/computer.png" width="40px" alt="Networking" />
+                  <img src="./img/computer.png" width="40px" alt="Networking" className="me-2" />
                   Networking
                 </h5>
               </div>
