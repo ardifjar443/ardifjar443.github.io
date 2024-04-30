@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quotes</title>
+</head>
+<body>
+    <h1>Random Quotes</h1>
+    <div id="quote-container">
+        <p>Click the buttons to display a random quote or change JSON source.</p>
+    </div>
+    <button id="random-button">Generate Random Quote</button>
+    <button id="change-source-button">Change JSON Source</button>
+
+    <script>
+        let jsonSources = {
+            "indonesian": "https://gist.githubusercontent.com/ardifjar443/e7aaa6932e1a45211789600a3ffa093e/raw/a619065545f32882d4f353c2b26e53be5a01c5c3/indonesian.json",
+            "english": "https://gist.githubusercontent.com/ardifjar443/c576fba951542cf9fbb43d2e22aaa4cd/raw/85ab102fd4be69ba5db130e94fe1e27bff81ba75/english.json"
+        };
+
+        let currentSource = jsonSources.indonesian;
+
+        const quoteContainer = document.getElementById("quote-container");
+        const randomButton = document.getElementById("random-button");
+        const changeSourceButton = document.getElementById("change-source-button");
+
+        function getRandomQuote(data) {
+            const randomIndex = Math.floor(Math.random() * data.quotes.length);
+            const randomQuote = data.quotes[randomIndex];
+            return randomQuote;
+        }
+
+        function displayRandomQuote(data) {
+            const randomQuote = getRandomQuote(data);
+
+            const quoteHTML = `
+                <p>Quote: ${randomQuote.text}</p>
+                <p>Source: ${randomQuote.source}</p>
+                <p>Length: ${randomQuote.length}</p>
+            `;
+
+            quoteContainer.innerHTML = quoteHTML;
+        }
+
+        function changeJSONSource() {
+            const newSource = prompt("Enter the language ('indonesian' or 'english'):");
+            if (newSource && jsonSources[newSource]) {
+                currentSource = jsonSources[newSource];
+                fetchJSONData();
+            } else {
+                alert("Invalid language or source.");
+            }
+        }
+
+        function fetchJSONData() {
+            fetch(currentSource)
+                .then(response => response.json())
+                .then(data => {
+                    displayRandomQuote(data);
+                })
+                .catch(error => {
+                    console.error("Error fetching JSON data:", error);
+                });
+        }
+
+        fetchJSONData();
+
+        randomButton.addEventListener("click", fetchJSONData);
+        changeSourceButton.addEventListener("click", changeJSONSource);
+    </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <title>quotes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Stil umum untuk div */
+      #quote-box {
+        /* Gaya yang sama di sini */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      /* Media query untuk perangkat mobile dengan lebar <= 600px */
+      @media (max-width: 600px) {
+        #quote-box {
+          width: 90%;
+          margin: 0 auto; /* Untuk tengah pada perangkat mobile */
+        }
+      }
+
+      /* Media query untuk desktop dengan lebar > 600px */
+      @media (min-width: 601px) {
+        #quote-box {
+          width: 50%;
+          margin: 0 auto; /* Untuk tengah pada desktop */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- jumbotron -->
+    <div
+      class="container min-vh-100 d-flex justify-content-center align-items-center"
+      id="quote-box"
+    >
+      <div
+        class="justify-content-center align-items-center"
+        style="background-color: white; width: 90%"
+      >
+        <div class="text fs-3 m-5 mb-2" id="quote-text">
+          <i class="fa fa-quote-left" id="tandaPetik"></i>
+          <span id="text"></span>
+        </div>
+        <div class="author justify-content-end d-flex me-5 fs-5" id="author">
+          ardi fajar arifin
+        </div>
+        <div class="buttons mb-2 ms-2"></div>
+        <div
+          class="d-flex m-3 d-flex justify-content-center align-items-center mt-5"
+        >
+          <div class="w-100">
+            <a
+              href="https://github.com/ardifjar443"
+              class="button btn mb-2"
+              style="color: white; width: 50px; height: 40px"
+              ><i class="fa fa-github"></i
+            ></a>
+            <div class="btn-group mb-2">
+              <button
+                type="button"
+                class="btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                id="bahasa"
+                style="color: white; height: 40px"
+              >
+                IND
+              </button>
+              <ul class="dropdown-menu" style="width: 50px !important">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="changeBahasa('IND')"
+                    id="indonesia"
+                    >IND</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="changeBahasa('ENG')"
+                    id="inggris"
+                    >ENG</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="" style="width: 50%; justify-content: end">
+            <button
+              class="btn button"
+              style="color: white; height: 100%; width: 100%"
+              id="random-button"
+            >
+              New quotes
+            </button>
+          </div>
+        </div>
+        <div
+          class="footer justify-content-center align-item-center d-flex p-3"
+          id="footer"
+          style="color: white"
+        >
+          <a
+            href="https://ardifjar443.github.io/"
+            style="color: white; text-decoration: none"
+            >By Ardi Fajar Arifin</a
+          >
+        </div>
+      </div>
+    </div>
+    <script>
+      var colors = [
+        "#16a085",
+        "#27ae60",
+        "#2c3e50",
+        "#f39c12",
+        "#e74c3c",
+        "#9b59b6",
+        "#FB6964",
+        "#342224",
+        "#472E32",
+        "#BDBB99",
+        "#77B1A9",
+        "#73A857",
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let jsonSources = {
+          IND: "https://gist.githubusercontent.com/ardifjar443/e7aaa6932e1a45211789600a3ffa093e/raw/a619065545f32882d4f353c2b26e53be5a01c5c3/indonesian.json",
+          ENG: "https://gist.githubusercontent.com/ardifjar443/c576fba951542cf9fbb43d2e22aaa4cd/raw/85ab102fd4be69ba5db130e94fe1e27bff81ba75/english.json",
+        };
+        let apiURL = jsonSources.IND;
+
+        const randomButton = document.getElementById("random-button");
+
+        let quotesData = [];
+
+        function displayRandomQuote() {
+          const filteredQuotes = quotesData.quotes.filter(
+            (quote) => quote.length < 100
+          );
+
+          if (filteredQuotes.length > 0) {
+            const randomIndex = Math.floor(
+              Math.random() * filteredQuotes.length
+            );
+            const randomQuote = filteredQuotes[randomIndex];
+            var text = document.getElementById("text");
+            var author = document.getElementById("author");
+
+            text.textContent = randomQuote.text;
+            author.textContent = "~" + randomQuote.source;
+            changeColors();
+          } else {
+            document.getElementById("quote-text").innerHTML =
+              "Tidak ada kutipan yang sesuai kriteria.";
+          }
+        }
+
+        function changeJSONSource() {
+          let newSource = buttonElement.textContent;
+
+          if (newSource && jsonSources[newSource]) {
+            apiURL = jsonSources[newSource];
+            fetchJSONData();
+          } else {
+            alert("Invalid language or source.");
+          }
+        }
+
+        function fetchJSONData() {
+          fetch(apiURL)
+            .then((response) => response.json())
+            .then((data) => {
+              quotesData = data;
+              displayRandomQuote(data);
+            })
+            .catch((error) => {
+              console.error("Error fetching JSON data:", error);
+            });
+        }
+
+        fetchJSONData();
+        randomButton.addEventListener("click", displayRandomQuote);
+      });
+
+      function getRandomColor() {
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
+      }
+
+      function changeColors() {
+        const newBackgroundColor = getRandomColor();
+
+        document.body.style.backgroundColor = newBackgroundColor;
+        const colorButtons = document.getElementsByClassName("button");
+        for (let i = 0; i < colorButtons.length; i++) {
+          colorButtons[i].style.backgroundColor = newBackgroundColor;
+        }
+        document.getElementById("text").style.color = newBackgroundColor;
+        document.getElementById("author").style.color = newBackgroundColor;
+
+        document.getElementById("tandaPetik").style.color = newBackgroundColor;
+        document.getElementById("footer").style.backgroundColor =
+          newBackgroundColor;
+      }
+    </script>
+  </body>
+</html>
