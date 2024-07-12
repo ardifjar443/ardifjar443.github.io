@@ -28,7 +28,15 @@ const Navbar = ({ routes }) => {
     <>
       <div className="flex w-full fixed z-50">
         <div className="w-[375px]   mt-8 ms-28">
-          <div className=" flex bg-[#B9D7EA]  rounded-[5px] z-[200] bg-opacity-40 backdrop-blur-sm">
+          <div
+            className={` flex  rounded-[5px] z-[200]  ${
+              routes == "/quote"
+                ? "bg-white "
+                : isVisible
+                ? "bg-[#B9D7EA] bg-opacity-40 backdrop-blur-sm"
+                : "bg-white  bg-opacity-70 backdrop-blur-lg"
+            }`}
+          >
             <div className="flex gap-3 w-full items-center justify-center text-[16px] mx-5 m-1">
               <Link
                 to={"/"}
@@ -42,7 +50,7 @@ const Navbar = ({ routes }) => {
               </Link>
 
               <Link
-                to={"/quote"}
+                to={"/project"}
                 className={`px-3 hover:bg-[#769FCD] rounded-sm  ${
                   routes === "/project"
                     ? "text-black"
@@ -52,7 +60,8 @@ const Navbar = ({ routes }) => {
                 Project
               </Link>
 
-              <button
+              <Link
+                to={"/writing"}
                 className={`px-3 hover:bg-[#769FCD] rounded-sm  ${
                   routes === "/writing"
                     ? "text-black"
@@ -60,8 +69,9 @@ const Navbar = ({ routes }) => {
                 }`}
               >
                 Writing
-              </button>
-              <button
+              </Link>
+              <Link
+                to={"/skills"}
                 className={`px-3 hover:bg-[#769FCD] rounded-sm  ${
                   routes === "/skills"
                     ? "text-black"
@@ -69,7 +79,7 @@ const Navbar = ({ routes }) => {
                 }`}
               >
                 Skills
-              </button>
+              </Link>
             </div>
           </div>
         </div>

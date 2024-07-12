@@ -12,6 +12,9 @@ import {
 import Quotes from "./component/quotes";
 import Home from "./component/home/home";
 import Footer from "./component/Footer";
+import Project from "./component/project";
+import Write from "./component/write";
+import Skill from "./component/skill";
 function App() {
   const location = useLocation();
 
@@ -21,6 +24,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quote" element={<Quotes />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/writing" element={<Write />} />
+        <Route path="/skills" element={<Skill />} />
       </Routes>
       <Footer />
     </div>

@@ -22,15 +22,15 @@ const QuoteBox = ({ quotes, setLanguage, language }) => {
   }, [quotes]);
 
   return (
-    <>
+    <div className=" relative">
       <div
         style={{ backgroundColor: backgroundColor }}
-        className="min-h-screen flex items-center justify-center p-3 quote-container"
+        className="min-h-screen flex items-center justify-center p-3 quote-container "
       >
         <div
           className={`quote ${
             randomQuote ? "fade-in" : ""
-          } bg-white p-5 rounded-4`}
+          } bg-white p-5 rounded-2xl`}
         >
           {randomQuote && (
             <div key={randomQuote.id}>
@@ -48,46 +48,44 @@ const QuoteBox = ({ quotes, setLanguage, language }) => {
           )}
           <button
             onClick={getRandomQuote}
-            className="btn fs-4 fw-bold"
+            className="p-2 rounded-xl"
             style={{ backgroundColor: backgroundColor, color: "white" }}
           >
             New Quote
           </button>
         </div>
       </div>
-      <div
-        style={{ backgroundColor: backgroundColor }}
-        className="quote-container"
-      >
-        <div
-          className="p-2 rounded-top-5 "
-          style={{ backgroundColor: "#f8f5f2" }}
-        >
+      <div className="quote-container absolute bottom-0 left-0 right-0">
+        <div className="p-2 rounded-top-5 gap-6  ">
           <button
             onClick={() => setLanguage("en")}
-            className=" fs-4"
+            className={`fs-4 ms-7 me-7 p-2 rounded-xl ${
+              language == "en" ? "bg-white " : ""
+            }`}
             style={
               language == "en"
-                ? { backgroundColor: "#f8f5f2", color: "black", border: "none" }
-                : { backgroundColor: "#f8f5f2", color: "white", border: "none" }
+                ? { color: "black", border: "none" }
+                : { color: "white", border: "none" }
             }
           >
             English
           </button>
           <button
             onClick={() => setLanguage("id")}
-            className=" fs-4"
+            className={`fs-4 ms-7 me-7 p-2 rounded-xl ${
+              language == "id" ? "bg-white " : ""
+            }`}
             style={
               language == "id"
-                ? { backgroundColor: "#f8f5f2", color: "black", border: "none" }
-                : { backgroundColor: "#f8f5f2", color: "white", border: "none" }
+                ? { color: "black", border: "none" }
+                : { color: "white", border: "none" }
             }
           >
             Indonesian
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

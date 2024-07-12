@@ -18,7 +18,7 @@ const Web2 = ({ namaProject, img, link }) => {
         <a
           href={link}
           target="_blank"
-          className="  bg-[#D6E6F2] hover:bg-[#8ba7c7]  rounded-[15px]  flex  items-center flex-col shadow-lg  transition duration-300 text-[#769FCD] hover:text-[#F7FBFC] "
+          className="  bg-[#D6E6F2] hover:bg-[#8ba7c7]  rounded-[15px]  flex  items-center flex-col shadow-lg  transition duration-300 text-[#769FCD] hover:text-[#F7FBFC] h-full"
           onMouseOver={() => {
             setX(1.05);
             setY(1.05);

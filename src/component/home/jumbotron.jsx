@@ -36,7 +36,7 @@ const Jumbotron = () => {
             <Web2
               namaProject={"Quotes Generator"}
               img={"./img/quotes.png"}
-              link={"https://codepen.io/ardi-fajar-arifin/pen/OJrxOdg"}
+              link={"/quote"}
             />
             <Skills
               namaSkill={"Machine Learning"}
