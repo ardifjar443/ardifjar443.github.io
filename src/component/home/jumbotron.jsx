@@ -11,7 +11,7 @@ const Jumbotron = () => {
   const [b, setB] = useState(0);
   return (
     <>
-      <div className="flex justify-center ">
+      <div className="flex justify-center mb-20 ">
         <div className=" w-1/2 ps-36 p-20">
           <div className="flex gap-4">
             <h1 className=" text-5xl">Hello I'm</h1>
