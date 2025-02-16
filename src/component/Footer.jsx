@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <div className="px-40 pt-10 flex justify-center items-center flex-col gap-4">
+      <div className=" mt-10 pt-10 flex justify-center items-center flex-col gap-4">
         <h1 className="text-[#769FCD] text-2xl">
           Ardi Fajar Arifin{" "}
           <span className="bg-[#769FCD] text-[#F7FBFC] p-1 rounded-lg hover:bg-[#F7FBFC] hover:text-[#769FCD] transition duration-300 ">

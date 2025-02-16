@@ -11,9 +11,9 @@ const Jumbotron = () => {
   const [b, setB] = useState(0);
   return (
     <>
-      <div className="flex justify-center mb-20 ">
-        <div className=" w-1/2 ps-36 p-20">
-          <div className="flex gap-4">
+      <div className="flex flex-col lg:flex-row md:flex-row justify-center mb-20 ">
+        <div className=" w-full  p-20">
+          <div className="lg:flex md:flex  gap-4">
             <h1 className=" text-5xl">Hello I'm</h1>
             <h1 className=" text-[#769FCD] text-5xl">Ardi</h1>
           </div>
@@ -31,13 +31,13 @@ const Jumbotron = () => {
             to look for a solution to the problem.
           </p>
         </div>
-        <div className="w-1/2">
-          <div className="grid grid-cols-2 gap-5 p-16 pe-28">
+        <div className="w-full">
+          <div className=" hidden lg:grid md:grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 p-16   ">
             <Web2
-              namaProject={"Quotes Generator"}
-              img={"./img/quotes.png"}
-              link={"/quote"}
-            />
+              namaProject={"PocketPlan"}
+              img={"./img/PocketPlan.png"}
+              link={"https://pocketplan.great-site.net/"}
+            />{" "}
             <Skills
               namaSkill={"Machine Learning"}
               img={"./img/iconML.png"}

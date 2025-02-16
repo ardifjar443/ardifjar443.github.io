@@ -15,6 +15,7 @@ import Footer from "./component/Footer";
 import Project from "./component/project";
 import Write from "./component/write";
 import Skill from "./component/skill";
+import Photo from "./component/Photo";
 function App() {
   const location = useLocation();
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/quote" element={<Quotes />} />
         <Route path="/project" element={<Project />} />
         <Route path="/writing" element={<Write />} />
+        <Route path="/photo" element={<Photo />} />
         <Route path="/skills" element={<Skill />} />
       </Routes>
       <Footer />

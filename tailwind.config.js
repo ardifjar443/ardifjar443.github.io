@@ -24,5 +24,5 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [Myclass],
+  plugins: [Myclass, require("daisyui")],
 };

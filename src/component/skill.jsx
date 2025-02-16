@@ -5,7 +5,7 @@ const Skill = () => {
   return (
     <>
       <div className="pt-20 min-h-screen">
-        <div className="grid grid-cols-4 gap-5 px-28 ">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 px-28 ">
           <Skills
             namaSkill={"Machine Learning"}
             img={"./img/iconML.png"}

@@ -6,29 +6,31 @@ const Body = () => {
   return (
     <>
       <div className=" ">
-        <div className="grid grid-cols-4 gap-5 px-28 ">
+        <div className="min-h-screen grid grid-cols-2 lg:grid-cols-4  gap-5 p-4  ">
+          <Web2
+            namaProject={"PocketPlan"}
+            img={"./img/PocketPlan.png"}
+            link={"https://pocketplan.great-site.net/"}
+          />
           <Foto
             link={"https://instagram.com/ardi_fj_ar/"}
             foto={"./img/profil.jpeg"}
           />
-          <Web2
-            namaProject={"Car Rental"}
-            img={"./img/projectRental.png"}
-            link={"https://github.com/ardifjar443/rentalMobil"}
-          />
+
           <Skills
             namaSkill={"FullStack Developer"}
             img={"./img/iconFullstack.png"}
           />
+
           <Skills namaSkill={"Python"} img={"./img/python.png"} />
           <Skills
             namaSkill={"Data Scientist"}
             img={"./img/data-scientist.png"}
           />
           <Web2
-            namaProject={"News Web"}
-            img={"./img/berita.png"}
-            link={"https://web-berita-lime.vercel.app/"}
+            namaProject={"RocketLuncur"}
+            img={"./img/rocketLuncur.png"}
+            link={"https://rocketluncur.infinityfreeapp.com/berita"}
           />
         </div>
       </div>

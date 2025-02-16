@@ -6,7 +6,17 @@ const Project = () => {
   return (
     <>
       <div className="pt-20 ">
-        <div className="grid grid-cols-4 gap-5 px-28 ">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4  gap-5 lg:px-28 p-10 ">
+          <Web2
+            namaProject={"PocketPlan"}
+            img={"./img/PocketPlan.png"}
+            link={"https://pocketplan.great-site.net/"}
+          />
+          <Web2
+            namaProject={"RocketLuncur"}
+            img={"./img/rocketLuncur.png"}
+            link={"https://rocketluncur.infinityfreeapp.com/berita"}
+          />
           <Web2
             namaProject={"Car Rental"}
             img={"./img/projectRental.png"}
