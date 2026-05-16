@@ -1,11 +1,13 @@
 import Foto from "../card/foto";
 import Skills from "../card/skills";
 import Web2 from "../card/web2";
+import PhotoHome from "../PhotoHome";
 
 const Body = () => {
   return (
     <>
       <div className=" ">
+        <PhotoHome />
         <div className="min-h-screen grid grid-cols-2 lg:grid-cols-4  gap-5 p-4  ">
           <Web2
             namaProject={"PocketPlan"}
