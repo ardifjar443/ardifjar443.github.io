@@ -7,7 +7,7 @@ const Body = () => {
   return (
     <>
       <div className=" ">
-        <PhotoHome />
+        {/* <PhotoHome /> */}
         <div className="min-h-screen grid grid-cols-2 lg:grid-cols-4  gap-5 p-4  ">
           <Web2
             namaProject={"PocketPlan"}

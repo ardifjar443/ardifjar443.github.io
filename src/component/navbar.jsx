@@ -36,16 +36,16 @@ const Navbar = ({ routes }) => {
       path: "/project",
       icon: <FolderGit2 size={20} />,
     },
-    {
-      name: "Writing",
-      path: "/writing",
-      icon: <PenSquare size={20} />,
-    },
-    {
-      name: "Photo",
-      path: "/photo",
-      icon: <Camera size={20} />,
-    },
+    // {
+    //   name: "Writing",
+    //   path: "/writing",
+    //   icon: <PenSquare size={20} />,
+    // },
+    // {
+    //   name: "Photo",
+    //   path: "/photo",
+    //   icon: <Camera size={20} />,
+    // },
     {
       name: "Skills",
       path: "/skills",
