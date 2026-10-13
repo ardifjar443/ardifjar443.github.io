@@ -6,7 +6,7 @@ import Writing from "../card/writing";
 import Quotes from "../quotes";
 import Foto from "../card/foto";
 import SosialCards from "../card/SocialCards";
-import AllProjectsCard from "../card/allProjectCard";
+import AllProjectsCard from "../card/AllProjectsCard";
 const Jumbotron = () => {
   const [x, setX] = useState(1);
   const [y, setY] = useState(1);
