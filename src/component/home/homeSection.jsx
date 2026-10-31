@@ -221,7 +221,7 @@ export default function HomeSections() {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/1Mu_HuWQw27czvZpqVp8CdVB_VM2ajwLF/view?usp=sharing"
+                href="https://drive.google.com/file/d/1avLq91B8jZxypHyjGYA5359FLuR1rYss/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-[#F7FBFC] px-5 py-3 font-semibold text-[#365F86] transition-colors hover:bg-white"

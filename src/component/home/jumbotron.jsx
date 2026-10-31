@@ -13,7 +13,7 @@ const Jumbotron = () => {
   const [a, setA] = useState(0);
   const [b, setB] = useState(0);
   const cvUrl =
-    "https://drive.google.com/file/d/1Mu_HuWQw27czvZpqVp8CdVB_VM2ajwLF/view?usp=sharing";
+    "https://drive.google.com/file/d/1avLq91B8jZxypHyjGYA5359FLuR1rYss/view?usp=sharing";
 
   return (
     <>
