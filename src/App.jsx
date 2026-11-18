@@ -20,7 +20,15 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="bg-[#F7FBFC]  ">
+    <div
+      className={
+        location.pathname === "/" ||
+        location.pathname === "/project" ||
+        location.pathname === "/skills"
+          ? "portfolio-app"
+          : "bg-[#F7FBFC]"
+      }
+    >
       <Navbar routes={location.pathname} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,7 +38,7 @@ function App() {
         <Route path="/photo" element={<Photo />} />
         <Route path="/skills" element={<Skill />} />
       </Routes>
-      <Footer />
+      {location.pathname !== "/" && <Footer />}
     </div>
   );
 }

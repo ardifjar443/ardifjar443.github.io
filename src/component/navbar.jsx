@@ -53,6 +53,42 @@ const Navbar = ({ routes }) => {
     },
   ];
 
+  if (routes === "/") {
+    return (
+      <header className="portfolio-nav">
+        <a className="portfolio-brand" href="#home">ARDI FAJAR</a>
+        <nav aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#experience">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#photography">Photography</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a className="portfolio-nav-cv" href="/cv/cv.pdf" download>Download CV</a>
+      </header>
+    );
+  }
+
+  if (routes === "/project" || routes === "/skills") {
+    return (
+      <header className="portfolio-nav">
+        <Link className="portfolio-brand" to="/">ARDI FAJAR</Link>
+        <nav aria-label="Main navigation">
+          <Link to="/">Home</Link>
+          <Link to="/project" aria-current={routes === "/project" ? "page" : undefined}>
+            Projects
+          </Link>
+          <Link to="/skills" aria-current={routes === "/skills" ? "page" : undefined}>
+            Skills
+          </Link>
+        </nav>
+        <a className="portfolio-nav-cv" href="/cv/cv.pdf" download>Download CV</a>
+      </header>
+    );
+  }
+
   return (
     <>
       {/* ========================= */}

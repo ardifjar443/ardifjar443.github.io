@@ -2,9 +2,9 @@ const Footer = () => {
   return (
     <>
       <div className=" mt-10 pt-10 flex justify-center items-center flex-col gap-4">
-        <h1 className="text-[#769FCD] text-2xl">
+        <h1 className="text-[#2563EB] text-2xl">
           Ardi Fajar Arifin{" "}
-          <span className="bg-[#769FCD] text-[#F7FBFC] p-1 rounded-lg hover:bg-[#F7FBFC] hover:text-[#769FCD] transition duration-300 ">
+          <span className="bg-[#2563EB] text-[#F8FBFF] p-1 rounded-lg hover:bg-[#F8FBFF] hover:text-[#2563EB] transition duration-300 ">
             Portfolio
           </span>
         </h1>

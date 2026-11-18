@@ -164,32 +164,28 @@ const skills = [
 
 export default function Skill() {
   return (
-    <main className="min-h-screen bg-[#F7FBFC] pb-20 pt-24">
-      {/* Page Header */}
-      <header className="mx-auto max-w-7xl px-6 pb-12 lg:px-10">
-        <p className="text-sm font-medium tracking-wide text-[#729BC8]">
+    <main className="portfolio-page">
+      <header className="portfolio-page-header">
+        <p className="portfolio-page-eyebrow">
           Expertise · Technical Skills
         </p>
 
-        <h1 className="mt-3 text-4xl font-bold tracking-tight text-[#24384B] sm:text-5xl">
+        <h1>
           Skills & Certifications
-          <span className="text-[#729BC8]">.</span>
+          <span>.</span>
         </h1>
 
-        <p className="mt-4 max-w-2xl text-sm leading-7 text-[#526B82] sm:text-base">
+        <p className="portfolio-page-description">
           My technical expertise, continuous learning journey, and professional
           certifications across AI/ML, web development, data analysis, and
           networking.
         </p>
       </header>
 
-      {/* Skills List */}
-      <section className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="space-y-14 md:space-y-20">
-          {skills.map((skill, index) => (
-            <SkillItem key={skill.name} skill={skill} index={index} />
-          ))}
-        </div>
+      <section className="portfolio-page-list" aria-label="Technical skills">
+        {skills.map((skill, index) => (
+          <SkillItem key={skill.name} skill={skill} index={index} />
+        ))}
       </section>
     </main>
   );

@@ -22,15 +22,15 @@ export default function SkillItem({ skill, index }) {
     <article className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10 lg:gap-14">
       {/* LEFT: Skill Illustration */}
       <div
-        className={`relative flex min-h-[250px] items-center justify-center overflow-hidden rounded-[15px] bg-[#D6E6F2] p-6 shadow-lg sm:min-h-[320px] ${
+        className={`relative flex min-h-[250px] items-center justify-center overflow-hidden rounded-[15px] border border-[#D9E4F0] bg-[#EAF3FF] p-6 shadow-sm sm:min-h-[320px] ${
           index % 2 !== 0 ? "md:order-2" : ""
         }`}
       >
-        <span className="absolute left-4 top-4 text-sm font-medium text-[#729BC8]">
+        <span className="absolute left-4 top-4 text-sm font-medium text-[#2563EB]">
           Skills · {skill.name}
         </span>
 
-        <div className="absolute right-3 top-3 h-7 w-7 rounded-full bg-[#F7FBFC] shadow-inner" />
+        <div className="absolute right-3 top-3 h-7 w-7 rounded-full bg-[#F8FBFF] shadow-inner" />
 
         <img
           src={skill.img}
@@ -42,22 +42,22 @@ export default function SkillItem({ skill, index }) {
 
       {/* RIGHT: Skill Details */}
       <div className={`py-2 md:py-6 ${index % 2 !== 0 ? "md:order-1" : ""}`}>
-        <p className="text-sm font-medium tracking-wide text-[#729BC8]">
+        <p className="text-sm font-medium tracking-wide text-[#2563EB]">
           Expertise · Skills
         </p>
 
-        <h2 className="mt-2 text-2xl font-bold text-[#24384B] sm:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold text-[#17283F] sm:text-3xl">
           {skill.name}
         </h2>
 
-        <p className="mt-4 text-sm leading-7 text-[#526B82] sm:text-base">
+        <p className="mt-4 text-sm leading-7 text-[#62748B] sm:text-base">
           {skill.description}
         </p>
 
         {/* Technologies */}
         {skill.technologies?.length > 0 && (
           <div className="mt-5">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-[#729BC8]">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-[#2563EB]">
               Technologies & Tools
             </h3>
 
@@ -65,7 +65,7 @@ export default function SkillItem({ skill, index }) {
               {skill.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-[#D6E6F2] px-3 py-1.5 text-xs font-medium text-[#365F86]"
+                  className="rounded-full bg-[#EAF3FF] px-3 py-1.5 text-xs font-medium text-[#22529C]"
                 >
                   {tech}
                 </span>
@@ -77,8 +77,8 @@ export default function SkillItem({ skill, index }) {
         {/* Training */}
         {hasTraining && (
           <section className="mt-7">
-            <h3 className="flex items-center gap-2 font-bold text-[#24384B]">
-              <span className="h-2 w-2 rounded-full bg-[#729BC8]" />
+            <h3 className="flex items-center gap-2 font-bold text-[#17283F]">
+              <span className="h-2 w-2 rounded-full bg-[#2563EB]" />
               Training & Learning
             </h3>
 
@@ -86,17 +86,17 @@ export default function SkillItem({ skill, index }) {
               {skill.training.map((item) => (
                 <div
                   key={`${item.name}-${item.provider}`}
-                  className="rounded-xl border border-[#D6E6F2] bg-white/70 p-4"
+                  className="rounded-xl border border-[#D9E4F0] bg-white p-4"
                 >
-                  <p className="font-semibold text-[#365F86]">{item.name}</p>
+                  <p className="font-semibold text-[#22529C]">{item.name}</p>
 
-                  <p className="mt-1 text-sm text-[#526B82]">
+                  <p className="mt-1 text-sm text-[#62748B]">
                     {item.provider}
                     {item.year ? ` · ${item.year}` : ""}
                   </p>
 
                   {item.description && (
-                    <p className="mt-2 text-sm leading-6 text-[#526B82]">
+                    <p className="mt-2 text-sm leading-6 text-[#62748B]">
                       {item.description}
                     </p>
                   )}
@@ -106,7 +106,7 @@ export default function SkillItem({ skill, index }) {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#527DA8] hover:text-[#24384B]"
+                      className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#2563EB] hover:text-[#17283F]"
                     >
                       View Training
                       <ExternalLinkIcon />
@@ -121,8 +121,8 @@ export default function SkillItem({ skill, index }) {
         {/* Certifications */}
         {hasCertifications && (
           <section className="mt-7">
-            <h3 className="flex items-center gap-2 font-bold text-[#24384B]">
-              <span className="h-2 w-2 rounded-full bg-[#729BC8]" />
+            <h3 className="flex items-center gap-2 font-bold text-[#17283F]">
+              <span className="h-2 w-2 rounded-full bg-[#2563EB]" />
               Certifications
             </h3>
 
@@ -130,18 +130,18 @@ export default function SkillItem({ skill, index }) {
               {skill.certifications.map((cert) => (
                 <div
                   key={`${cert.name}-${cert.issuer}`}
-                  className="flex flex-col gap-3 rounded-xl border border-[#D6E6F2] bg-white/70 p-4 sm:flex-row sm:items-center sm:justify-between"
+                  className="flex flex-col gap-3 rounded-xl border border-[#D9E4F0] bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
                 >
                   <div>
-                    <p className="font-semibold text-[#365F86]">{cert.name}</p>
+                    <p className="font-semibold text-[#22529C]">{cert.name}</p>
 
-                    <p className="mt-1 text-sm text-[#526B82]">
+                    <p className="mt-1 text-sm text-[#62748B]">
                       {cert.issuer}
                       {cert.year ? ` · ${cert.year}` : ""}
                     </p>
 
                     {cert.description && (
-                      <p className="mt-2 text-sm leading-6 text-[#526B82]">
+                      <p className="mt-2 text-sm leading-6 text-[#62748B]">
                         {cert.description}
                       </p>
                     )}
@@ -152,7 +152,7 @@ export default function SkillItem({ skill, index }) {
                       href={cert.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-full bg-[#527DA8] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#365F86] sm:self-center"
+                      className="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-full bg-[#2563EB] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1D4ED8] sm:self-center"
                     >
                       View Certificate
                       <ExternalLinkIcon />
@@ -165,7 +165,7 @@ export default function SkillItem({ skill, index }) {
         )}
 
         {!hasTraining && !hasCertifications && (
-          <p className="mt-5 text-sm text-[#729BC8]">
+          <p className="mt-5 text-sm text-[#2563EB]">
             Explore my practical experience through selected projects.
           </p>
         )}

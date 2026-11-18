@@ -34,15 +34,15 @@ export default function ProjectItem({ project, index }) {
         target={project.demo || project.github ? "_blank" : undefined}
         rel={project.demo || project.github ? "noopener noreferrer" : undefined}
         aria-label={`Preview ${project.name}`}
-        className={`group relative flex min-h-[250px] items-center justify-center overflow-hidden rounded-[15px] bg-[#D6E6F2] p-4 shadow-lg sm:min-h-[320px] ${
+        className={`group relative flex min-h-[250px] items-center justify-center overflow-hidden rounded-[15px] border border-[#D9E4F0] bg-[#EAF3FF] p-4 shadow-sm sm:min-h-[320px] ${
           index % 2 !== 0 ? "md:order-2" : ""
         }`}
       >
-        <span className="absolute left-4 top-4 z-10 text-sm font-medium text-[#527DA8]">
+        <span className="absolute left-4 top-4 z-10 text-sm font-medium text-[#2563EB]">
           Project . {project.name}
         </span>
 
-        <div className="absolute right-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-[#F7FBFC] shadow-inner">
+        <div className="absolute right-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-[#F8FBFF] shadow-inner">
           <ExternalLinkIcon />
         </div>
 
@@ -60,21 +60,21 @@ export default function ProjectItem({ project, index }) {
           index % 2 !== 0 ? "md:order-1" : ""
         }`}
       >
-        <p className="text-sm font-medium tracking-wide text-[#729BC8]">
+        <p className="text-sm font-medium tracking-wide text-[#2563EB]">
           {project.category}
         </p>
 
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#24384B] sm:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#17283F] sm:text-3xl">
           {project.name}
         </h2>
 
-        <p className="mt-4 text-sm leading-7 text-[#526B82] sm:text-base">
+        <p className="mt-4 text-sm leading-7 text-[#62748B] sm:text-base">
           {project.description}
         </p>
 
         {/* Technology stack */}
         <div className="mt-5">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[#729BC8]">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[#2563EB]">
             Technologies
           </p>
 
@@ -82,7 +82,7 @@ export default function ProjectItem({ project, index }) {
             {project.tech.map((technology) => (
               <span
                 key={technology}
-                className="rounded-full bg-[#D6E6F2] px-3 py-1.5 text-xs font-medium text-[#365F86]"
+                className="rounded-full bg-[#EAF3FF] px-3 py-1.5 text-xs font-medium text-[#22529C]"
               >
                 {technology}
               </span>
@@ -99,7 +99,7 @@ export default function ProjectItem({ project, index }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#527DA8] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#365F86] hover:shadow-md"
+                className="inline-flex items-center gap-2 rounded-full bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1D4ED8] hover:shadow-md"
               >
                 {link.label}
                 <ExternalLinkIcon />

@@ -140,35 +140,31 @@ const projects = [
 
 export default function Project() {
   return (
-    <main className="min-h-screen bg-[#F7FBFC] pb-20 pt-24">
-      {/* Page Header */}
-      <header className="mx-auto max-w-7xl px-6 pb-12 lg:px-10">
-        <p className="text-sm font-medium tracking-wide text-[#729BC8]">
+    <main className="portfolio-page">
+      <header className="portfolio-page-header">
+        <p className="portfolio-page-eyebrow">
           Portfolio · Selected Work
         </p>
 
-        <h1 className="mt-3 text-4xl font-bold tracking-tight text-[#24384B] sm:text-5xl">
-          Projects<span className="text-[#729BC8]">.</span>
+        <h1>
+          Projects<span>.</span>
         </h1>
 
-        <p className="mt-4 max-w-2xl text-sm leading-7 text-[#526B82] sm:text-base">
+        <p className="portfolio-page-description">
           A collection of projects where I explore software development,
           intelligent systems, and connected technologies to solve practical
           problems.
         </p>
 
-        <div className="mt-5 text-sm text-[#729BC8]">
+        <p className="portfolio-page-meta">
           {projects.length} projects · Selected work and experiments
-        </div>
+        </p>
       </header>
 
-      {/* Project List */}
-      <section className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="space-y-14 md:space-y-20">
-          {projects.map((project, index) => (
-            <ProjectItem key={project.name} project={project} index={index} />
-          ))}
-        </div>
+      <section className="portfolio-page-list" aria-label="Selected projects">
+        {projects.map((project, index) => (
+          <ProjectItem key={project.name} project={project} index={index} />
+        ))}
       </section>
     </main>
   );
