@@ -1,4 +1,5 @@
 import "./portfolio.css";
+import { Link } from "react-router-dom";
 
 const cvUrl = "/cv/cv.pdf";
 
@@ -202,9 +203,9 @@ function Home() {
             <p className="eyebrow">FEATURED PROJECTS</p>
             <h2>Selected work</h2>
           </div>
-          <a className="text-link" href="/project">
+          <Link className="text-link" to="/project">
             All projects <Arrow />
-          </a>
+          </Link>
         </div>
         <div className="project-grid">
           {projects.map((project, index) => (

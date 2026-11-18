@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function AllProjectsCard() {
   return (
-    <a
-      href="/project"
+    <Link
+      to="/project"
       aria-label="Lihat semua proyek Ardi Fajar"
       className="group relative flex h-full min-h-[180px] flex-col justify-between overflow-hidden rounded-[15px] bg-[#D6E6F2] p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
@@ -75,6 +77,6 @@ export default function AllProjectsCard() {
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

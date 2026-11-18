@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting - Ardi Fajar Portfolio</title>
+    <script>
+      (function (location) {
+        var route = location.pathname.replace(/^\/+/, "");
+        var query = location.search
+          ? "&" + location.search.slice(1).replace(/&/g, "~and~")
+          : "";
+        location.replace(
+          location.origin + "/?/" + route + query + location.hash,
+        );
+      })(window.location);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the requested page...</p>
+  </body>
+</html>
