@@ -1,10 +1,8 @@
-// src/App.js
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import "./index.css";
 import Navbar from "./component/navbar";
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
   useLocation,
@@ -16,30 +14,34 @@ import Project from "./component/project";
 import Write from "./component/write";
 import Skill from "./component/skill";
 import Photo from "./component/Photo";
+import SmoothScroll from "./component/common/SmoothScroll";
+
 function App() {
   const location = useLocation();
 
   return (
-    <div
-      className={
-        location.pathname === "/" ||
-        location.pathname === "/project" ||
-        location.pathname === "/skills"
-          ? "portfolio-app"
-          : "bg-[#F7FBFC]"
-      }
-    >
-      <Navbar routes={location.pathname} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/quote" element={<Quotes />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/writing" element={<Write />} />
-        <Route path="/photo" element={<Photo />} />
-        <Route path="/skills" element={<Skill />} />
-      </Routes>
-      {location.pathname !== "/" && <Footer />}
-    </div>
+    <SmoothScroll>
+      <div
+        className={
+          location.pathname === "/" ||
+          location.pathname === "/project" ||
+          location.pathname === "/skills"
+            ? "portfolio-app"
+            : "bg-[#F7FBFC]"
+        }
+      >
+        <Navbar routes={location.pathname} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quote" element={<Quotes />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/writing" element={<Write />} />
+          <Route path="/photo" element={<Photo />} />
+          <Route path="/skills" element={<Skill />} />
+        </Routes>
+        {location.pathname !== "/" && <Footer />}
+      </div>
+    </SmoothScroll>
   );
 }
 

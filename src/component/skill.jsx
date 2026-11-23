@@ -1,4 +1,5 @@
 import SkillItem from "./card/SkillItem";
+import ScrollWordTitle from "./common/ScrollWordTitle";
 
 const skills = [
   {
@@ -170,10 +171,9 @@ export default function Skill() {
           Expertise · Technical Skills
         </p>
 
-        <h1>
-          Skills & Certifications
-          <span>.</span>
-        </h1>
+        <ScrollWordTitle as="h1" delay={0.1} start="top 95%">
+          Skills & Certifications<span>.</span>
+        </ScrollWordTitle>
 
         <p className="portfolio-page-description">
           My technical expertise, continuous learning journey, and professional

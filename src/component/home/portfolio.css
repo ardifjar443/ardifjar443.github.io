@@ -260,6 +260,26 @@
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
+.scroll-word-heading {
+  display: block;
+}
+
+.word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  margin-right: 0.24em;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+  padding-top: 0.04em;
+  margin-top: -0.04em;
+}
+
+.word-inner {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
 .project-card {
   background: #fff;
   border: 1px solid var(--line);
@@ -271,12 +291,6 @@
   min-height: 260px;
   overflow: hidden;
   text-decoration: none;
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.project-card:hover {
-  box-shadow: 0 12px 30px #1c24351a;
-  transform: translateY(-3px);
 }
 
 .project-card > img {
@@ -412,9 +426,17 @@
   margin-top: 36px;
 }
 
-.discipline-grid article {
+.discipline-grid article,
+.discipline-card {
   border-top: 1px solid var(--deep-line);
-  padding-top: 15px;
+  padding: 16px 14px;
+  border-radius: 12px;
+  transition: background-color 220ms ease, border-color 220ms ease;
+}
+
+.discipline-card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #38bdf8;
 }
 
 .discipline-grid h3 {
@@ -450,6 +472,11 @@
   border: 1px solid var(--line);
   border-radius: 15px;
   padding: 24px;
+  transition: border-color 220ms ease;
+}
+
+.experience-card:hover {
+  border-color: #93c5fd;
 }
 
 .experience-card h3 {
@@ -487,6 +514,11 @@
   border: 1px solid var(--line);
   border-radius: 13px;
   padding: 7px 8px 10px;
+  transition: border-color 220ms ease;
+}
+
+.certification-card:hover {
+  border-color: #93c5fd;
 }
 
 .certificate-image,

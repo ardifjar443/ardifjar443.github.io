@@ -6,8 +6,14 @@ body {
     margin: 0;
 }
 
+/* Lenis smooth scroll support */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
 html {
-  scroll-behavior: smooth;
+  /* Native smooth scroll disabled so Lenis handles scroll interpolation smoothly */
 }
 
 .portfolio-app {

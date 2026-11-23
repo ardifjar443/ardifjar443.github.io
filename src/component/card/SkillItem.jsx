@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const ExternalLinkIcon = () => (
   <svg
     viewBox="0 0 24 24"
@@ -19,12 +21,28 @@ export default function SkillItem({ skill, index }) {
   const hasCertifications = skill.certifications?.length > 0;
 
   return (
-    <article className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10 lg:gap-14">
+    <motion.article
+      className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10 lg:gap-14"
+      initial={{ opacity: 0, y: 35 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{
+        duration: 0.6,
+        delay: (index % 2) * 0.1,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    >
       {/* LEFT: Skill Illustration */}
-      <div
+      <motion.div
         className={`relative flex min-h-[250px] items-center justify-center overflow-hidden rounded-[15px] border border-[#D9E4F0] bg-[#EAF3FF] p-6 shadow-sm sm:min-h-[320px] ${
           index % 2 !== 0 ? "md:order-2" : ""
         }`}
+        whileHover={{
+          y: -6,
+          scale: 1.02,
+          boxShadow: "0 18px 36px -10px rgba(37, 99, 235, 0.16)",
+        }}
+        transition={{ duration: 0.25 }}
       >
         <span className="absolute left-4 top-4 text-sm font-medium text-[#2563EB]">
           Skills · {skill.name}
@@ -38,7 +56,7 @@ export default function SkillItem({ skill, index }) {
           loading="lazy"
           className="mt-6 max-h-[220px] w-2/3 object-contain transition-transform duration-500 hover:scale-105 sm:max-h-[260px]"
         />
-      </div>
+      </motion.div>
 
       {/* RIGHT: Skill Details */}
       <div className={`py-2 md:py-6 ${index % 2 !== 0 ? "md:order-1" : ""}`}>
@@ -63,12 +81,14 @@ export default function SkillItem({ skill, index }) {
 
             <div className="mt-3 flex flex-wrap gap-2">
               {skill.technologies.map((tech) => (
-                <span
+                <motion.span
                   key={tech}
                   className="rounded-full bg-[#EAF3FF] px-3 py-1.5 text-xs font-medium text-[#22529C]"
+                  whileHover={{ y: -2, scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
                 >
                   {tech}
-                </span>
+                </motion.span>
               ))}
             </div>
           </div>
@@ -84,9 +104,14 @@ export default function SkillItem({ skill, index }) {
 
             <div className="mt-3 space-y-3">
               {skill.training.map((item) => (
-                <div
+                <motion.div
                   key={`${item.name}-${item.provider}`}
-                  className="rounded-xl border border-[#D9E4F0] bg-white p-4"
+                  className="rounded-xl border border-[#D9E4F0] bg-white p-4 transition-colors hover:border-[#2563EB]"
+                  whileHover={{
+                    x: 6,
+                    boxShadow: "0 8px 24px -4px rgba(16, 36, 62, 0.08)",
+                  }}
+                  transition={{ duration: 0.2 }}
                 >
                   <p className="font-semibold text-[#22529C]">{item.name}</p>
 
@@ -112,7 +137,7 @@ export default function SkillItem({ skill, index }) {
                       <ExternalLinkIcon />
                     </a>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
           </section>
@@ -128,9 +153,14 @@ export default function SkillItem({ skill, index }) {
 
             <div className="mt-3 space-y-3">
               {skill.certifications.map((cert) => (
-                <div
+                <motion.div
                   key={`${cert.name}-${cert.issuer}`}
-                  className="flex flex-col gap-3 rounded-xl border border-[#D9E4F0] bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
+                  className="flex flex-col gap-3 rounded-xl border border-[#D9E4F0] bg-white p-4 transition-colors hover:border-[#2563EB] sm:flex-row sm:items-center sm:justify-between"
+                  whileHover={{
+                    x: 6,
+                    boxShadow: "0 8px 24px -4px rgba(16, 36, 62, 0.08)",
+                  }}
+                  transition={{ duration: 0.2 }}
                 >
                   <div>
                     <p className="font-semibold text-[#22529C]">{cert.name}</p>
@@ -158,7 +188,7 @@ export default function SkillItem({ skill, index }) {
                       <ExternalLinkIcon />
                     </a>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
           </section>
@@ -170,6 +200,6 @@ export default function SkillItem({ skill, index }) {
           </p>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 }

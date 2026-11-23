@@ -1,4 +1,5 @@
 import ProjectItem from "./card/ProjectItem";
+import ScrollWordTitle from "./common/ScrollWordTitle";
 
 const projects = [
   {
@@ -16,7 +17,6 @@ const projects = [
     ],
     demo: "https://www.paramudaradio.com/",
     demoLabel: "Live Website",
-    // github: "URL_GITHUB_PARAMUDA",
   },
   {
     name: "Indonesian Text-to-SQL Research",
@@ -32,9 +32,6 @@ const projects = [
       "MySQL",
       "Flask",
     ],
-    // Isi jika aplikasi atau hasil penelitian sudah tersedia secara publik.
-    // demo: "URL_DEMO_TEXT2SQL",
-    // demoLabel: "Live Demo",
     github: "https://github.com/ardifjar443/text2sql",
   },
   {
@@ -46,9 +43,7 @@ const projects = [
     tech: ["Laravel", "React", "Tailwind CSS", "Audio Streaming"],
     demo: "https://ramafm.com/",
     demoLabel: "Live Website",
-    // github: "URL_GITHUB_RAMAFM",
   },
-
   {
     name: "PocketPlan",
     category: "Web Development",
@@ -56,8 +51,6 @@ const projects = [
     description:
       "A personal finance application for tracking income, expenses, and financial activity through a visual dashboard.",
     tech: ["Web Development", "Dashboard", "Data Visualization"],
-    // demo: "https://pocketplan.great-site.net/",
-    // demoLabel: "Live Website",
     github: "https://github.com/ardifjar443/pocketPlanWeb",
   },
   {
@@ -67,7 +60,6 @@ const projects = [
     description:
       "A space-themed news website presenting articles and information through an engaging visual interface.",
     tech: ["Web Development", "News", "Responsive UI"],
-    // demo: "https://rocketluncur.infinityfreeapp.com/berita",
     demoLabel: "Live Website",
     github: "https://github.com/ardifjar443/rocketLuncur",
   },
@@ -102,17 +94,6 @@ const projects = [
     demoLabel: "Try Project",
     internal: true,
   },
-  // {
-  //   name: "Angka Boom",
-  //   category: "Web Development",
-  //   img: "./img/angkaBoom.png",
-  //   description:
-  //     "An interactive number-based game designed to provide a simple and engaging user experience.",
-  //   tech: ["JavaScript", "Interactive UI"],
-  //   demo: "/angka-boom",
-  //   demoLabel: "Play Game",
-  //   internal: true,
-  // },
   {
     name: "IoT Green House",
     category: "IoT & Networking",
@@ -132,7 +113,6 @@ const projects = [
     description:
       "A front-end development project showcasing interface-building practice and reusable UI components.",
     tech: ["Front-End", "UI Development"],
-    // Tambahkan URL repository atau demo yang benar di sini.
     github:
       "https://github.com/ardifjar443/Front-End-Development-Libraries-certification-freeCodeCamp",
   },
@@ -146,9 +126,9 @@ export default function Project() {
           Portfolio · Selected Work
         </p>
 
-        <h1>
+        <ScrollWordTitle as="h1" delay={0.1} start="top 95%">
           Projects<span>.</span>
-        </h1>
+        </ScrollWordTitle>
 
         <p className="portfolio-page-description">
           A collection of projects where I explore software development,

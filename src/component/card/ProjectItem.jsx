@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const ExternalLinkIcon = () => (
   <svg
     viewBox="0 0 24 24"
@@ -27,9 +29,19 @@ export default function ProjectItem({ project, index }) {
   ].filter(Boolean);
 
   return (
-    <article className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-8 lg:gap-12">
+    <motion.article
+      className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-8 lg:gap-12"
+      initial={{ opacity: 0, y: 35 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{
+        duration: 0.6,
+        delay: (index % 2) * 0.1,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    >
       {/* LEFT: Project Preview */}
-      <a
+      <motion.a
         href={project.demo || project.github || undefined}
         target={project.demo || project.github ? "_blank" : undefined}
         rel={project.demo || project.github ? "noopener noreferrer" : undefined}
@@ -37,6 +49,13 @@ export default function ProjectItem({ project, index }) {
         className={`group relative flex min-h-[250px] items-center justify-center overflow-hidden rounded-[15px] border border-[#D9E4F0] bg-[#EAF3FF] p-4 shadow-sm sm:min-h-[320px] ${
           index % 2 !== 0 ? "md:order-2" : ""
         }`}
+        whileHover={{
+          y: -6,
+          scale: 1.015,
+          boxShadow: "0 20px 35px -10px rgba(37, 99, 235, 0.18)",
+        }}
+        whileTap={{ scale: 0.985 }}
+        transition={{ duration: 0.25 }}
       >
         <span className="absolute left-4 top-4 z-10 text-sm font-medium text-[#2563EB]">
           Project . {project.name}
@@ -52,7 +71,7 @@ export default function ProjectItem({ project, index }) {
           loading="lazy"
           className="mt-7 max-h-[290px] w-full rounded-xl object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
-      </a>
+      </motion.a>
 
       {/* RIGHT: Project Details */}
       <div
@@ -80,12 +99,14 @@ export default function ProjectItem({ project, index }) {
 
           <div className="flex flex-wrap gap-2">
             {project.tech.map((technology) => (
-              <span
+              <motion.span
                 key={technology}
                 className="rounded-full bg-[#EAF3FF] px-3 py-1.5 text-xs font-medium text-[#22529C]"
+                whileHover={{ y: -2, scale: 1.05 }}
+                transition={{ duration: 0.2 }}
               >
                 {technology}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>
@@ -94,20 +115,23 @@ export default function ProjectItem({ project, index }) {
         {links.length > 0 && (
           <div className="mt-7 flex flex-wrap gap-3">
             {links.map((link) => (
-              <a
+              <motion.a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1D4ED8] hover:shadow-md"
+                className="inline-flex items-center gap-2 rounded-full bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#1D4ED8]"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.96 }}
+                transition={{ duration: 0.2 }}
               >
                 {link.label}
                 <ExternalLinkIcon />
-              </a>
+              </motion.a>
             ))}
           </div>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 }
